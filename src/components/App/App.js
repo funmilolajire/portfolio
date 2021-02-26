@@ -1,8 +1,8 @@
 import './App.scss';
 import ReactGA from 'react-ga';
-// import GA from '../../utils/GoogleAnalytics';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+//Google Analytics Start
 const TRACKING_ID = "UA-190642802-1"; // YOUR_OWN_TRACKING_ID
 ReactGA.initialize(TRACKING_ID, {
   debug: true,
@@ -23,11 +23,11 @@ ReactGA.exception({
   description: 'An error ocurred',
   fatal: true
 });
+//Google Analytics End
 
 function App() {
   return (
     <Router>
-      {/* { GA.init() && <GA.RouteTracker />} */}
       <Switch>
         <Route exact path="/" render={() => <div className="App">Hello World</div>} />
       </Switch>
