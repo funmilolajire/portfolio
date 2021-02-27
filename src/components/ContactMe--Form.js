@@ -4,7 +4,7 @@ export const ContactForm = () => {
     const [form, setForm] = useState({ name: '', email: '', message: '' })
     const { name, email, message } = form;
 
-    const inputRef = useRef;
+    const inputRef = useRef();
 
     const handleChange = ({ target }) => {
         setForm(prev => ({
