@@ -1,14 +1,19 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 export const ContactForm = () => {
     const [form, setForm] = useState({ name: '', email: '', message: '' })
     const { name, email, message } = form;
 
-    const handleChange = ({ target: { name, value } }) => {
+    const inputRef = useRef;
+
+    const handleChange = ({ target }) => {
         setForm(prev => ({
             ...prev,
-            [name]: value
+            [target.name]: target.value
         }))
+        if (!name || !email || !message) {
+            let placeholder = '';
+        }
     }
 
     const handleSubmit = (e) => {
@@ -25,10 +30,10 @@ export const ContactForm = () => {
     return (
         <div style={{ borderColor: "#33323D" }} className="flex justify-between pt-12 border-t pb-28 border-opacity-10 ContactForm">
             <h2 className="text-5xl font-bold">Contact Me</h2>
-            <form netlify onSubmit={handleSubmit} method="post" className="w-7/12 text-sm" encType="text/plain">
+            <form name="portfolio-contact-form" onSubmit={handleSubmit} method="post" className="w-7/12 text-sm" encType="text/plain">
                 <div className="pb-6 name">
                     <label htmlFor="name" className="block pb-2 font-bold opacity-80">Name</label>
-                    <input value={name} onChange={handleChange} autoComplete="off" className="block w-full py-2 pl-4 bg-gray-300 rounded-md focus:outline-none focus:ring focus:border-gray-800 placeholder-opacity-40 bg-opacity-40" type="text" name="name" id="name" placeholder="Enter name here..." />
+                    <input ref={inputRef} value={name} onChange={handleChange} autoComplete="off" className="block w-full py-2 pl-4 bg-gray-300 rounded-md focus:outline-none focus:ring focus:border-gray-800 placeholder-opacity-40 bg-opacity-40" type="text" name="name" id="name" placeholder="Enter name here..." />
                 </div>
                 <div className="pb-6 email">
                     <label htmlFor="email" className="block pb-2 font-bold opacity-80">Email Address</label>

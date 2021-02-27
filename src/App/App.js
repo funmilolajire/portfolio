@@ -11,7 +11,8 @@ import { ContactMe } from '../pages/ContactMe';
 
 
 //Google Analytics Start
-const TRACKING_ID = "UA-190642802-1"; // YOUR_OWN_TRACKING_ID
+// const { REACT_APP_GA_TRACKING_ID } = process.env;
+const TRACKING_ID = "UA-190642802-1";
 ReactGA.initialize(TRACKING_ID, {
   debug: true,
   titleCase: false,
