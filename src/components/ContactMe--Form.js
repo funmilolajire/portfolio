@@ -11,9 +11,6 @@ export const ContactForm = () => {
             ...prev,
             [target.name]: target.value
         }))
-        if (!name || !email || !message) {
-            let placeholder = '';
-        }
     }
 
     const handleSubmit = (e) => {
