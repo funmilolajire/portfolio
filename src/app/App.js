@@ -38,7 +38,7 @@ ReactGA.exception({
 //Google Analytics End
 
 //initialize smooth scroll
-const scroll = new SmoothScroll('a[href*="#"]', {
+new SmoothScroll('a[href*="#"]', {
   speed: 500,
   speedAsDuration: true,
   clip: true,
