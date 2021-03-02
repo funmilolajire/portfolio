@@ -1,4 +1,3 @@
-import './App.scss';
 //import react google analytics
 import ReactGA from 'react-ga';
 //import react router
