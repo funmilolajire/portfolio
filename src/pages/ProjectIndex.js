@@ -1,11 +1,9 @@
 import { useEffect } from 'react';
-import { GetInTouch } from '../components/ContactMe--GiT';
-import { ContactForm } from '../components/ContactMe--Form';
 
 //layout component
 import { Layout } from '../components/LayoutComponent';
 
-export const ContactMe = () => {
+export const ProjectIndex = () => {
     useEffect(() => {
         window.scrollTo({
             top: 0,
@@ -16,10 +14,9 @@ export const ContactMe = () => {
     return (
         <>
             <Layout pageMeta={{
-                title: 'Contact Me'
+                title: 'Project'
             }}>
-                <GetInTouch />
-                <ContactForm />
+
             </Layout>
         </>
     )

@@ -17,7 +17,7 @@ export const Header = () => {
                         <NavLink exact to="/" aria-current="page" activeStyle={{ color: '#5fb4a2' }}>Home</NavLink>
                     </li>
                     <li className="px-10 navItem">
-                        <NavLink to="/portfolio" aria-current="page" activeStyle={{ color: '#5fb4a2' }}>Portfolio</NavLink>
+                        <NavLink to="/projects" aria-current="page" activeStyle={{ color: '#5fb4a2' }}>Projects</NavLink>
                     </li>
                     <li className="pl-10 navItem">
                         <NavLink to="/contact-me" aria-current="page" activeStyle={{ color: '#5fb4a2' }}>Contact Me</NavLink>
