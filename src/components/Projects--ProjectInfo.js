@@ -1,7 +1,6 @@
 import axios from 'axios';
 import ReactDOM from 'react-dom';
 import { useState, useEffect } from 'react';
-import { useSpring, animated } from 'react-spring';
 import { MdClose } from 'react-icons/md';
 
 export const ProjectInfo = ({ projectName, setClickedProject, showModal, setShowModal, modalRef, closeModal }) => {
@@ -22,18 +21,8 @@ export const ProjectInfo = ({ projectName, setClickedProject, showModal, setShow
         getProjectData()
     }, [projectName, showModal])
 
-    //animation
-    const animation = useSpring({
-        config: {
-            duration: 250
-        },
-        opacity: showModal ? 1 : 0,
-        transform: showModal ? `translateY(0%)` : `translateY(-100%)`
-    })
-
     return ReactDOM.createPortal(
         <div ref={modalRef} onClick={closeModal} className="fixed top-0 z-40 flex items-center justify-center w-screen h-screen bg-gdb bg-opacity-70 ProjectInfo">
-            {/* <animated.div style={animation}> */}
             <div className="relative flex w-9/12 h-9/12 bg-gray-50 Modal">
                 <div style={{ backgroundColor: project.backgroundColor }} className="w-1/2 max-h-full Image">
                     <figure className="max-h-full p-2 pb-0">
@@ -52,7 +41,6 @@ export const ProjectInfo = ({ projectName, setClickedProject, showModal, setShow
                     <span onClick={handleClick} aria-label="Close Modal" className="absolute top-0 right-0 m-1 text-4xl cursor-pointer"><MdClose /></span>
                 </section>
             </div>
-            {/* </animated.div> */}
         </div>,
         document.getElementById('portal')
     )

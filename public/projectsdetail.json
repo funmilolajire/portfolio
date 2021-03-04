@@ -52,7 +52,7 @@
             "id": 4,
             "name": "manage",
             "image": "/images/projectimages/manage.png",
-            "backgroundColor": "#FFEFEC",
+            "backgroundColor": "#F3603C",
             "thumbnailContent": {
                 "description":"This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
                 "projectLink": "/projects/manage",
