@@ -1,23 +1,12 @@
-import { useEffect } from 'react';
-
 //layout component
 import { Layout } from '../components/LayoutComponent';
+//import components
+import { ProjectsMainIndex } from '../components/Projects--Index';
 
-export const ProjectIndex = () => {
-    useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            bottom: -window.innerHeight,
-            behavior: 'smooth'
-        })
-    })
-    return (
-        <>
-            <Layout pageMeta={{
-                title: 'Project'
-            }}>
-
-            </Layout>
-        </>
-    )
-}
+export const ProjectIndex = () => (
+    <Layout pageMeta={{
+        title: 'Projects'
+    }}>
+        <ProjectsMainIndex />
+    </Layout>
+)

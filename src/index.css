@@ -21,7 +21,87 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.ProjectTemplate:hover {
+  z-index: 1;
+  box-shadow: 0 25px 40px rgba(0, 0, 0, .5)
+}
+
+.ProjectTemplate::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(180deg, #f00, #000);
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.ProjectTemplate:hover::before {
+  opacity: 1;
+}
+
+.ProjectTemplate h3,
+.ProjectTemplate p,
+.ProjectTemplate button {
+  transform: translateY(400px);
+  -webkit-transform: translateY(400px);
+  -moz-transform: translateY(400px);
+  -ms-transform: translateY(400px);
+  -o-transform: translateY(400px);
+  transition: 0.6s;
+  transition-property: transform;
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  -ms-transition: 0.6s;
+  -o-transition: 0.6s;
+}
+
+.ProjectTemplate:hover h3,
+.ProjectTemplate:hover p,
+.ProjectTemplate:hover button {
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+
+.ProjectTemplate:hover h3 {
+  transition-delay: 0.2s;
+}
+
+.ProjectTemplate:hover p {
+  transition-delay: 0.3s;
+}
+
+.ProjectTemplate:hover button {
+  transition-delay: 0.4s;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, rgb(51, 50, 61, 0.9));
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, rgb(51, 50, 61, 1));
 }

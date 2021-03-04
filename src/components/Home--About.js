@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 
-export const About = ({ aboutMeRef }) => {
-
+export const About = () => {
     return (
-        <div className="flex pt-12 mt-24 Home--About" data-about-me ref={aboutMeRef} id="about-me">
+        <div className="flex pt-12 mt-24 Home--About min-h-96" data-about-me id="about-me">
             <picture className="w-1/2 overflow-hidden rounded-full">
                 <source media="(min-width: 880px)"
                     srcset="/images/homepage/desktop/image-homepage-profile.jpg,

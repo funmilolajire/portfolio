@@ -6,7 +6,7 @@ export const CTA = () => {
         <>
             {
                 location.pathname !== "/contact-me" &&
-                <section className="flex items-center justify-between space-x-8 CTA py-36">
+                <section data-scroll className="flex items-center justify-between space-x-8 CTA py-36">
                     <h3 className="pr-6 text-4xl font-bold w-96" style={{ letterSpacing: "-0.357143px" }}>
                         Interested in doing a project together?
                    </h3>

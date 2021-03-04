@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet';
 import { Header } from './Header';
 import { CTA } from './CallToAction';
 import { Footer } from './Footer';
+import { ScrollToTop } from './ScrollToTop';
 
 export const Layout = ({ pageMeta, children }) => (
     <>
@@ -15,8 +16,11 @@ export const Layout = ({ pageMeta, children }) => (
             {/* <meta name="keywords" content={pageMeta.keywords.join(',')} /> */}
             <title>{pageMeta.title} | Funmilola O. - Developer</title>
         </Helmet>
+        <ScrollToTop />
         <Header />
-        {children}
+        <main data-scroll-section>
+            {children}
+        </main>
         <CTA />
         <Footer />
     </>
