@@ -50,7 +50,7 @@ function App() {
 
   return (
     <Router>
-      <div style={{ scrollPaddingTop: '2rem' }} className="px-40 text-gdb bg-gray-50 App">
+      <div style={{ scrollPaddingTop: '2rem' }} className="min-h-screen px-40 text-gdb bg-gray-50 App">
         <Switch>
           <Route exact path="/" render={() => <Home />} />
           <Route exact path="/projects" render={() => <ProjectIndex />} />

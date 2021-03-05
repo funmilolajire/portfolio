@@ -38,7 +38,7 @@ export const ProjectInfo = ({ projectName, setClickedProject, showModal, setShow
                         {project.moreInformation && <a href={project.moreInformation.githubLink}><button style={{ letterSpacing: "2px" }} className="h-12 uppercase transition-colors duration-200 border focus:outline-none focus:ring-1 focus:ring-green-500 hover:bg-gdb hover:text-white border-gdb w-44">Github Link</button></a>}
                         {project.moreInformation && <a href={project.moreInformation.websiteLink}><button style={{ letterSpacing: "2px" }} className="h-12 uppercase transition-colors duration-200 border focus:outline-none focus:ring-1 focus:ring-green-500 hover:bg-gdb hover:text-white border-gdb w-44">Visit Website</button></a>}
                     </div>
-                    <span onClick={handleClick} aria-label="Close Modal" className="absolute top-0 right-0 m-1 text-4xl cursor-pointer"><MdClose /></span>
+                    <span onClick={handleClick} aria-label="Close Modal" className="absolute top-0 right-0 m-1 text-4xl cursor-pointer"><MdClose className="text-gdb" /></span>
                 </section>
             </div>
         </div>,

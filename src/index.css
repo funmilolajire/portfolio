@@ -21,6 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 .ProjectTemplate:hover {
   z-index: 1;
   box-shadow: 0 25px 40px rgba(0, 0, 0, .5)

@@ -25,7 +25,11 @@ module.exports = {
       name2: "#4a569d",
       name3: "#4bc0c8"
     },
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        'autoFit': 'repeat(auto-fit, minmax(300px, 1fr))',
+      }
+    },
     screens: {
       '2xl': { 'max': '1640px' },
       'xl': { 'max': '1366px' },
