@@ -1,25 +1,41 @@
+import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Logo } from './Logo';
+import { IoMenuOutline, IoCloseOutline } from 'react-icons/io5';
 
 export const Header = () => {
+    const [mobileMenu, setMobileMenu] = useState(false)
+
+
+    const handleMenuOpen = () => {
+        setMobileMenu(prev => !prev)
+    }
+
     const location = useLocation();
 
     const HeaderClasses = location.pathname === "/"
-        ? "flex justify-between pt-16 pb-14 Header"
-        : "flex justify-between pt-16 pb-20 Header"
+        ? "flex justify-between items-center sm:pb-8 sm:pt-8 sm:max-h-full md:h-28 h-32 pt-14 pb-16 Header"
+        : "flex justify-between items-center sm:pb-9 sm:pt-8 sm:max-h-full md:h-32 h-36 pt-14 pb-20 Header"
 
     return (
         <header className={HeaderClasses}>
             <Logo fillColor="#33323D" />
-            <nav style={{ letterSpacing: "2px" }} className="text-xs font-bold uppercase">
-                <ul className="flex">
-                    <li className="px-10 navItem">
+            <span onClick={handleMenuOpen} className="menuIcon">
+                {!mobileMenu
+                    ? <IoMenuOutline data-menu className="text-3xl cursor-pointer menu" />
+                    : <IoCloseOutline data-menu-close className="text-3xl cursor-pointer close" />
+                }
+            </span>
+
+            <nav className={mobileMenu ? "" : "sm:hidden"}>
+                <ul>
+                    <li className="navItem">
                         <NavLink exact to="/" aria-current="page" activeStyle={{ color: '#5fb4a2' }}>Home</NavLink>
                     </li>
-                    <li className="px-10 navItem">
+                    <li className="navItem">
                         <NavLink to="/projects" aria-current="page" activeStyle={{ color: '#5fb4a2' }}>Projects</NavLink>
                     </li>
-                    <li className="pl-10 navItem">
+                    <li className="navItem">
                         <NavLink to="/contact-me" aria-current="page" activeStyle={{ color: '#5fb4a2' }}>Contact Me</NavLink>
                     </li>
                 </ul>

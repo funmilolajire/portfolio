@@ -58,9 +58,9 @@ export const ProjectsMainIndex = () => {
     };
 
     return (
-        <div className="relative ProjectsIndex">
-            <h2 className="pb-4 text-5xl font-bold text-center mb-14">Projects</h2>
-            <div className="relative grid grid-flow-row justify-items-center grid-cols-autoFit gap-x-14 gap-y-14 auto-rows-fr Projects auto-cols-min">
+        <div className="ProjectsIndex">
+            <h2>Projects</h2>
+            <div className="Projects">
                 {projects && projects.map(project => <ProjectTemplate key={project.id} setClickedProject={setClickedProject} setShowModal={setShowModal} project={project} />)}
             </div>
             {showModal && clickedProject && <ProjectInfo projectName={clickedProject} showModal={showModal} modalRef={modalRef} closeModal={closeModal} setShowModal={setShowModal} setClickedProject={setClickedProject} />}

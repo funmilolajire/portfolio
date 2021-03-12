@@ -1,0 +1,62 @@
+.ProjectInfo {
+    @apply fixed top-0 z-40 flex items-center justify-center w-screen h-screen bg-gdb bg-opacity-70;
+
+    div.Modal {
+        @apply relative flex bg-gray-50;
+
+        div.Image {
+            @apply w-1/2 p-2 pb-0 relative overflow-hidden;
+
+            figure {
+                @apply relative h-full;
+
+                img {
+                    @apply w-full h-full object-cover transform-gpu absolute bottom-0 left-0;
+                }
+            }
+        }
+
+        section.Content {
+            @apply w-1/2 p-8;
+
+            h2 {
+                @apply pb-5 text-5xl font-bold text-transparent bg-gradient-to-bl bg-clip-text from-name1 to-gdb;
+            }
+
+            p.background {
+                @apply pb-4 text-base;
+            }
+
+            p.description {
+                @apply pb-5 text-base;
+            }
+
+            p.tools {
+                @apply pb-10;
+            }
+
+            div.buttons {
+                @apply flex space-x-8;
+
+                a {
+                    button {
+                        @apply h-12 uppercase transition-colors duration-500 border border-gdb w-44;
+                        letter-spacing: 2px;
+
+                        &:hover {
+                            @apply bg-gdb text-white;
+                        }
+
+                        &:focus {
+                            @apply outline-none ring-1 ring-green-500;
+                        }
+                    }
+                }
+            }
+
+            span.CloseModal {
+                @apply absolute top-0 right-0 m-1 text-4xl cursor-pointer;
+            }
+        }
+    }
+}

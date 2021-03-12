@@ -1,0 +1,37 @@
+/* autoprefixer grid: autoplace */
+@import-normalize;
+@import 'sanitize.css';
+@import 'sanitize.css/typography.css';
+@import 'sanitize.css/forms.css';
+
+//import helpers
+@import './helpers/functions';
+@import './helpers/mixins';
+@import './helpers/placeholders';
+@import './helpers/utilities';
+@import './helpers/variables';
+
+//import components
+@import './components/callToAction';
+@import './components/contactMeForm';
+@import './components/contactMeGiT';
+@import './components/homeAbout';
+@import './components/homeHero';
+@import './components/homeSkillSet';
+@import './components/logo';
+@import './components/projectsIndex';
+@import './components/projectsInfo';
+@import './components/projectTemplate';
+@import './components/scrollToTopButton';
+@import './components/skillSetIcons';
+@import './components/socialIcons';
+
+//import layout
+@import './layout/footer';
+@import './layout/header';
+
+//import pages
+
+
+//import app
+@import './app/app';

@@ -1,0 +1,65 @@
+.SkillSetIcons {
+    @apply grid items-center grid-flow-row grid-rows-2 gap-10 pt-10 grid-cols-autoFitSkillSet justify-items-center;
+
+    figure {
+        svg {
+            @apply w-20 h-20;
+        }
+
+        figcaption {
+            @apply text-center break-words text-sm pt-4 font-bold;
+        }
+    }
+}
+
+@media all and (max-width: 780px) {
+    .SkillSetIcons {
+        @apply pt-9 grid-cols-autoFitSkillSetMin;
+    }
+}
+
+@media all and (max-width: 620px) {
+    .SkillSetIcons {
+        @apply pt-8 grid-cols-autoFitSkillSetSm;
+    }
+}
+
+@media all and (max-width: 590px) {
+    .SkillSetIcons {
+        @apply gap-x-6 gap-y-10;
+
+        figure {
+            svg {
+                @apply w-20 h-16 justify-center;
+            }
+
+            figcaption {
+                @apply pt-3 font-bold;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 420px) {
+    .SkillSetIcons {
+        @apply gap-x-4;
+
+        figure {
+            svg {
+                @apply w-20 h-14;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 405px) {
+    .SkillSetIcons {
+        @apply gap-x-2;
+
+        figure {
+            svg {
+                @apply w-20 h-10 justify-center;
+            }
+        }
+    }
+}

@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import '../scss/main.scss'
 //import react google analytics
 import ReactGA from 'react-ga';
 //import react router
@@ -8,8 +10,6 @@ import { ProjectIndex } from '../pages/ProjectIndex';
 import { ContactMe } from '../pages/ContactMe';
 //smooth scroll
 import SmoothScroll from "smooth-scroll";
-
-import { useEffect } from 'react';
 
 //Google Analytics Start
 // const { REACT_APP_GA_TRACKING_ID } = process.env;
@@ -50,7 +50,7 @@ function App() {
 
   return (
     <Router>
-      <div style={{ scrollPaddingTop: '2rem' }} className="min-h-screen px-40 text-gdb bg-gray-50 App">
+      <div className="App">
         <Switch>
           <Route exact path="/" render={() => <Home />} />
           <Route exact path="/projects" render={() => <ProjectIndex />} />

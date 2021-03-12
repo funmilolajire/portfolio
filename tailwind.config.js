@@ -28,6 +28,10 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         'autoFit': 'repeat(auto-fit, minmax(300px, 1fr))',
+        'autoFitMin': 'repeat(auto-fit, minmax(250px, 1fr))',
+        'autoFitSkillSet': 'repeat(auto-fit, minmax(200px, 1fr))',
+        'autoFitSkillSetMin': 'repeat(auto-fit, minmax(150px, 1fr))',
+        'autoFitSkillSetSm': 'repeat(auto-fit, minmax(100px, 1fr))',
       }
     },
     screens: {
@@ -35,7 +39,8 @@ module.exports = {
       'xl': { 'max': '1366px' },
       'lg': { 'max': '1040px' },
       'md': { 'max': '780px' },
-      'sm': { 'max': '440px' },
+      'sm': { 'max': '590px' },
+      'xs': { 'max': '100px' },
       'print': { 'raw': 'print' }
     }
   },

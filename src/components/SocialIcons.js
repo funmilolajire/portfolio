@@ -1,7 +1,7 @@
 export const SocialIcons = ({ fillColor }) => {
     return (
-        <ul className="flex items-center space-x-4 SocialIcons">
-            <li className="duration-700 email transform-gpu hover:-translate-y-1">
+        <ul className="SocialIcons">
+            <li className="email">
                 <a href="mailto:funmilolajire@gmail.com">
                     <svg version="1.1" id="Capa_1" width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         viewBox="0 0 477.867 477.867" xmlSpace="preserve">
@@ -17,7 +17,7 @@ export const SocialIcons = ({ fillColor }) => {
                             </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
                 </a>
             </li>
-            <li className="duration-700 github hover:-translate-y-1 transform-gpu">
+            <li className="github">
                 <a href="https://github.com/funmilolajire">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24">
                         <path
@@ -26,7 +26,7 @@ export const SocialIcons = ({ fillColor }) => {
                     </svg>
                 </a>
             </li>
-            <li className="duration-700 twitter transform-gpu hover:-translate-y-1">
+            <li className="twitter">
                 <a href="https://twitter.com/funmilolajire">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
                         <path
@@ -35,7 +35,7 @@ export const SocialIcons = ({ fillColor }) => {
                     </svg>
                 </a>
             </li>
-            <li className="duration-700 linkedIn transform-gpu hover:-translate-y-1">
+            <li className="linkedIn">
                 <a href="https://www.linkedin.com/in/funmilola-olajire-8a38881b3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                         <path

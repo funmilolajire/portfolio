@@ -1,0 +1,16 @@
+.App {
+    @apply px-40 text-gdb bg-gray-50;
+    min-height: 100vh;
+
+    @media all and (max-width: 940px) {
+        @apply px-20;
+    }
+
+    @media all and (max-width: 880px) {
+        @apply px-10;
+    }
+
+    @media all and (max-width: 590px) {
+        @apply px-8 overflow-hidden;
+    }
+}

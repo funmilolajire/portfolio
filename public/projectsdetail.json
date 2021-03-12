@@ -35,7 +35,7 @@
         {
             "id": 3,
             "name": "bookmark",
-            "image": "/images/projectimages/bookmark.png",
+            "image": "/images/projectimages/jammming.png",
             "backgroundColor": "#4F63D8",
             "thumbnailContent": {
                 "description":"This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
@@ -51,7 +51,7 @@
         {
             "id": 4,
             "name": "manage",
-            "image": "/images/projectimages/manage.png",
+            "image": "/images/projectimages/whereindeworld-lightmode.png",
             "backgroundColor": "#F3603C",
             "thumbnailContent": {
                 "description":"This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",

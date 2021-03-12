@@ -18,6 +18,7 @@
     "react-ga": "^3.3.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
+    "react-image-magnifiers": "^1.4.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-spring": "^9.0.0-rc.3",
@@ -65,5 +66,21 @@
     "autoprefixer": "^9.8.6",
     "postcss": "^7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
-  }
+  },
+  "description": "personal portfolio",
+  "main": "craco.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/funmilolajire/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "funmilolajire"
+  ],
+  "author": "Funmilola O.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/funmilolajire/portfolio/issues"
+  },
+  "homepage": "/"
 }
