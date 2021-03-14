@@ -1,38 +1,51 @@
 .ProjectInfo {
-    @apply fixed top-0 z-40 flex items-center justify-center w-screen h-screen bg-gdb bg-opacity-70;
+    @apply fixed top-0 flex items-center justify-center w-screen h-screen bg-gdb bg-opacity-70;
+    z-index: 1200;
 
     div.Modal {
-        @apply relative flex bg-gray-50;
+        @apply text-gdb relative flex bg-gray-50;
 
         div.Image {
-            @apply w-1/2 p-2 pb-0 relative overflow-hidden;
+            @apply w-1/2 pt-8 px-9 relative overflow-hidden;
 
             figure {
-                @apply relative h-full;
+                @apply relative h-full aspect-h-16 aspect-w-9;
 
                 img {
-                    @apply w-full h-full object-cover transform-gpu absolute bottom-0 left-0;
+                    @apply w-full h-full object-fill transform-gpu absolute inset-0;
                 }
             }
         }
 
         section.Content {
-            @apply w-1/2 p-8;
+            @apply w-1/2 pt-12 px-8;
 
             h2 {
-                @apply pb-5 text-5xl font-bold text-transparent bg-gradient-to-bl bg-clip-text from-name1 to-gdb;
+                @apply pb-4 text-4xl font-bold;
             }
 
-            p.background {
-                @apply pb-4 text-base;
-            }
+            // p.background {
+            //     @apply pb-4 text-base;
+            // }
 
             p.description {
                 @apply pb-5 text-base;
             }
 
-            p.tools {
-                @apply pb-10;
+            div.tools {
+                @apply pb-10 w-full;
+
+                span.title {
+                    @apply mr-1;
+                }
+
+                div {
+                    @apply inline-flex mt-1 flex-wrap break-words gap-2;
+
+                    span.tool {
+                        @apply bg-gdb text-white shadow-xl rounded-md p-1 lowercase;
+                    }
+                }
             }
 
             div.buttons {
@@ -55,7 +68,80 @@
             }
 
             span.CloseModal {
-                @apply absolute top-0 right-0 m-1 text-4xl cursor-pointer;
+                @apply absolute top-0 right-0 m-1 text-4xl cursor-pointer text-gdb opacity-70;
+
+                &:hover {
+                    @apply opacity-100;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .ProjectInfo {
+        div.Modal {
+
+            div.Image {
+                @apply pt-2 px-3;
+            }
+
+            section.Content {
+                @apply pt-10 px-4;
+
+                div.buttons {
+                    @apply flex-col space-x-0 space-y-4;
+
+                    a {
+                        @apply w-full;
+
+                        button {
+                            @apply w-full;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:1000px) {
+    .ProjectInfo {
+        div.Modal {
+            height: 100vh;
+            width: 100vw;
+        }
+    }
+}
+
+@media all and (max-width:800px) {
+    .ProjectInfo {
+        @apply bg-gray-50 h-full overflow-auto;
+
+        div.Modal {
+            @apply flex-col h-full;
+
+            div.Image {
+                @apply h-1/2 w-full pt-8 px-9;
+
+                figure {
+
+                    img {
+                        @apply object-fill h-full;
+                    }
+                }
+            }
+
+            section.Content {
+                @apply w-full h-1/2 pt-12 px-8;
+
+                div.buttons {
+                    @apply pb-12;
+                }
+
+                span.CloseModal {
+                    @apply fixed;
+                }
             }
         }
     }

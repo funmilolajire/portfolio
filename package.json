@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.1.1",
+    "@tailwindcss/aspect-ratio": "^0.2.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -11,7 +12,6 @@
     "axios": "^0.21.1",
     "enzyme": "^3.11.0",
     "firebase": "^8.2.9",
-    "locomotive-scroll": "^4.1.0",
     "node-sass": "^5.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

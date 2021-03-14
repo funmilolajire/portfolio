@@ -1,5 +1,7 @@
 .ProjectTemplate {
-    height: 300px;
+    height: 314px;
+    max-width: 339px;
+    min-width: 320px;
     @apply relative w-full overflow-hidden transition-all duration-500 ease-out rounded-sm transform-gpu group;
 
     &:hover {
@@ -28,7 +30,7 @@
     }
 
     figure {
-        @apply box-border relative flex justify-center h-full pt-12 px-14;
+        @apply box-border relative flex justify-center h-full pt-8 px-9;
 
         img {
             filter: drop-shadow(20px 20px 0px rgba(0, 0, 0, 0.147563));
@@ -64,6 +66,14 @@
             &:focus {
                 @apply outline-none ring-1 ring-green-500;
             }
+        }
+    }
+}
+
+@media all and (max-width: 590px) {
+    .ProjectTemplate {
+        &:hover {
+            @apply scale-100;
         }
     }
 }

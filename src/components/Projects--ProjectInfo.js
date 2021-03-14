@@ -7,10 +7,9 @@ export const ProjectInfo = ({ projectName, setClickedProject, showModal, setShow
     const [project, setProject] = useState({})
     const getProjectData = useCallback(async () => {
         const project = await axios.get('/projectsdetail.json').then(res => {
-            const data = res.data.projects.filter(item => item.name === projectName.toLowerCase())[0]
+            const data = res.data.projects.filter(item => item.name === projectName)[0]
             return data
         })
-        project.name = project.name.charAt(0).toUpperCase() + project.name.substring(1);
         setProject(project)
     }, [projectName])
     const handleClick = () => {
@@ -26,20 +25,25 @@ export const ProjectInfo = ({ projectName, setClickedProject, showModal, setShow
             <div className="w-9/12 h-5/6 Modal">
                 <div style={{ backgroundColor: project.backgroundColor }} className="Image">
                     <figure>
-                        <img src={project.image} alt={project.name} />
+                        <img src={project.image} loading="lazy" alt={project.name} />
                     </figure>
                 </div>
                 <section className="Content">
                     <h2>{project.name}</h2>
-                    {project.moreInformation && <p className="background">{project.moreInformation.projectBackground}</p>}
+                    {/* {project.moreInformation && <p className="background">{project.moreInformation.projectBackground}</p>} */}
                     {project.thumbnailContent && <p className="description">{project.thumbnailContent.description}</p>}
-                    {project.thumbnailContent && <p className="tools">Tools Used: {project.thumbnailContent.toolsUsed.join("/")}</p>}
+                    <div className="tools">
+                        <span className="title">Tools Used: </span>
+                        <div>
+                            {project.thumbnailContent && project.thumbnailContent.toolsUsed.map(tool => <span title={tool} className="tool">{tool}</span>)}
+                        </div>
+                    </div>
                     <div className="buttons">
                         {project.moreInformation && <a href={project.moreInformation.githubLink}><button>Github Link</button></a>}
                         {project.moreInformation && <a href={project.moreInformation.websiteLink}><button>Visit Website</button></a>}
                     </div>
                     <span onClick={handleClick} aria-label="Close Modal" className="CloseModal">
-                        <MdClose className="text-gdb hover:text-red-700" />
+                        <MdClose />
                     </span>
                 </section>
             </div>

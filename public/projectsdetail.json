@@ -1,68 +1,33 @@
 {
-    "projects": [
-        {
+    "projects": [{
             "id": 1,
-            "name": "fylo",
-            "image": "/images/projectimages/fylo.png",
-            "backgroundColor": "#41B4D3",
+            "name": "Jammming",
+            "image": "/images/projectimages/jammming.png",
+            "backgroundColor": "#5132BD",
             "thumbnailContent": {
-                "description":"This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
-                "projectLink": "/projects/fylo",
-                "toolsUsed": ["HTML","CSS","JS"]
+                "description": "A website that allows users to search the Spotify library, create a custom playlist, then save it to their Spotify account. A remake of a previous project written using class components, did this remake to practice using functional components, hooks, testing using jest and enzyme, writing code with accessibility in mind and writing a good README document.",
+                "projectLink": "/projects/jammming",
+                "toolsUsed": ["SPOTIFY API", "REACT", "CSS", "JEST", "ENZYME"]
             },
             "moreInformation": {
-                "projectBackground": "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
-                "websiteLink": "",
-                "githubLink": ""
+                "websiteLink": "https://jammmingv2.netlify.app/",
+                "githubLink": "https://github.com/funmilolajire/jammmingv2"
             }
         },
         {
             "id": 2,
-            "name": "insure",
-            "image": "/images/projectimages/insure.png",
-            "backgroundColor": "#9A99AB",
-            "thumbnailContent": {
-                "description":"This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
-                "projectLink": "/projects/insure",
-                "toolsUsed": ["HTML","CSS","JS"]
-            },
-            "moreInformation": {
-                "projectBackground": "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
-                "websiteLink": "",
-                "githubLink": ""
-            }
-        },
-        {
-            "id": 3,
-            "name": "bookmark",
-            "image": "/images/projectimages/jammming.png",
-            "backgroundColor": "#4F63D8",
-            "thumbnailContent": {
-                "description":"This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
-                "projectLink": "/projects/bookmark",
-                "toolsUsed": ["HTML","CSS","JS"]
-            },
-            "moreInformation": {
-                "projectBackground": "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
-                "websiteLink": "",
-                "githubLink": ""
-            }
-        },
-        {
-            "id": 4,
-            "name": "manage",
-            "image": "/images/projectimages/whereindeworld-lightmode.png",
+            "name": "WITW",
+            "image": "/images/projectimages/witw.png",
             "backgroundColor": "#F3603C",
             "thumbnailContent": {
-                "description":"This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
-                "projectLink": "/projects/manage",
-                "toolsUsed": ["HTML","CSS","JS"]
+                "description": "WITW(whereintheworld) is a progressive web app that pulls data from rest countries api and displays it to the user on first visit, the user can search for countries and filter countries by region, it also has a color theme switcher so the user can choose between lightmode or darkmode and it recalls on their next visit.",
+                "projectLink": "/projects/witw",
+                "toolsUsed": ["REACT", "RESTCOUNTRIES API", "TAILWIND CSS"]
             },
             "moreInformation": {
-                "projectBackground": "This project was a front-end  challenge from Frontend Mentor. It’s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I’ve learned something new with each project, helping me to improve and adapt my style.",
-                "websiteLink": "",
-                "githubLink": ""
+                "websiteLink": "https://whereindeworld.netlify.app/",
+                "githubLink": "https://github.com/funmilolajire/whereintheworldv2"
             }
-        }       
+        }
     ]
 }

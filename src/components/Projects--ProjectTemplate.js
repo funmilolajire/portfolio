@@ -10,8 +10,8 @@ export const ProjectTemplate = ({ project, setShowModal, setClickedProject }) =>
             </figure>
             <div data-hover-state className="textContent">
                 <h3>{project.name}</h3>
-                <p className="description">{project.description}</p>
-                <p className="tools">{project.toolsUsed.join("/")}</p>
+                <p className="description">{project.description.slice(0, 150) + '...'}</p>
+                {/* <p className="tools">{project.toolsUsed.join("/")}</p> */}
                 <button onClick={handleClick}>View Project</button>
             </div>
         </div>

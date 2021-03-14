@@ -12,7 +12,6 @@ import { ContactMe } from '../pages/ContactMe';
 import SmoothScroll from "smooth-scroll";
 
 //Google Analytics Start
-// const { REACT_APP_GA_TRACKING_ID } = process.env;
 const TRACKING_ID = "UA-190642802-1";
 ReactGA.initialize(TRACKING_ID, {
   debug: true,
