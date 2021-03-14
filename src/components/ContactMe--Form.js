@@ -65,15 +65,15 @@ export const ContactForm = () => {
                     </span>Fill all required fields</p>
                 </div>
                 <div className="field name">
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="name">Name *</label>
                     <input data-name value={name} onChange={handleChange} className="focus:ring-green-500" type="text" name="name" id="name" placeholder="Enter name here..." />
                 </div>
                 <div className="email field">
-                    <label htmlFor="email">Email Address</label>
+                    <label htmlFor="email">Email Address *</label>
                     <input value={email} data-email onChange={handleChange} className="focus:ring-green-500" type="email" name="email" id="email" placeholder="Enter email here..." />
                 </div>
                 <div className="message field">
-                    <label htmlFor="message">Message</label>
+                    <label htmlFor="message">Message *</label>
                     <textarea value={message} data-message onChange={handleChange} className="focus:ring-green-500" name="message" id="message" cols="30" rows="10" placeholder="How can I help?"></textarea>
                 </div>
                 <button name="submit" type="submit">Send Message</button>

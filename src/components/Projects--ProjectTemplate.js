@@ -1,7 +1,8 @@
 export const ProjectTemplate = ({ project, setShowModal, setClickedProject }) => {
     const handleClick = () => {
         setClickedProject(project.name)
-        setShowModal(true)
+        setShowModal(true);
+        document.getElementsByTagName('body')[0].classList.add('overflow-hidden');
     }
     return (
         <div style={{ backgroundColor: project.backgroundColor }} className="ProjectTemplate">

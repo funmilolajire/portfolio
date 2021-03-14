@@ -33,18 +33,23 @@
             }
 
             a {
-                @apply flex items-center justify-center w-12 h-12 bg-black bg-opacity-10;
+                @apply flex items-center justify-center w-full h-full;
 
-                svg {
-                    g {
-                        @apply stroke-current;
+                span:first-child {
+                    @apply flex items-center justify-center w-12 h-12 bg-black bg-opacity-10;
+
+                    svg {
+                        g {
+                            @apply stroke-current;
+                        }
                     }
+                }
+
+                span:last-child {
+                    @apply w-9/12 text-white;
                 }
             }
 
-            p {
-                @apply justify-center w-9/12 text-white;
-            }
         }
     }
 }
@@ -156,6 +161,12 @@
 
             h1 {
                 @apply pr-0;
+            }
+
+            div {
+                &:hover {
+                    @apply text-sdc bg-db;
+                }
             }
         }
     }

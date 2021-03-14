@@ -5,16 +5,26 @@
     .ScrollToTopButton {
         animation: fadeIn 0.5s;
         -webkit-animation: fadeIn 0.5s;
-        @apply w-full h-full transition-opacity duration-500 ease-linear opacity-50 cursor-pointer;
+        @apply w-full h-full transition-all transform-gpu duration-500 ease-linear opacity-50 cursor-pointer;
 
         &:hover {
-            @apply opacity-100;
+            @apply opacity-100 -translate-y-2;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .ScrollToTop {
+        @apply right-4;
+
+        .ScrollToTopButton {
+            &:hover {
+                @apply opacity-50;
+            }
         }
     }
 }
 
 @media all and (max-width: 490px) {
-    .ScrollToTop {
-        @apply right-4;
-    }
+    .ScrollToTop {}
 }

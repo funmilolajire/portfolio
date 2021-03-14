@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { useState, useEffect, useCallback } from 'react';
 import { MdClose } from 'react-icons/md';
 
-export const ProjectInfo = ({ projectName, setClickedProject, showModal, setShowModal, modalRef, closeModal }) => {
+export const ProjectInfo = ({ projectName, resetModal, showModal, modalRef, closeModal }) => {
     const [project, setProject] = useState({})
     const getProjectData = useCallback(async () => {
         const project = await axios.get('/projectsdetail.json').then(res => {
@@ -12,9 +12,9 @@ export const ProjectInfo = ({ projectName, setClickedProject, showModal, setShow
         })
         setProject(project)
     }, [projectName])
+
     const handleClick = () => {
-        setShowModal(false);
-        setClickedProject('')
+        resetModal()
     }
     useEffect(() => {
         getProjectData()

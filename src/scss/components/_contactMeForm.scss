@@ -74,6 +74,12 @@
 
         form {
             @apply w-full pt-8 pb-24;
+            button {
+                @apply transform-none;
+                &:hover{
+                    @apply bg-gdb;
+                }
+            }
         }
     }
 }

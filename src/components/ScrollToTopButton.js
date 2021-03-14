@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useState } from 'react';
+import { useLayoutEffect, useCallback, useState } from 'react';
 import { IoChevronUpCircle } from 'react-icons/io5';
 
 export const ScrollToTopButton = () => {
@@ -23,7 +23,7 @@ export const ScrollToTopButton = () => {
         })
     }
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         window.addEventListener('scroll', checkScrollTop)
         return () => {
             window.removeEventListener('scroll', checkScrollTop)

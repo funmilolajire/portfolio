@@ -1,7 +1,7 @@
 import { ProjectTemplate } from "./Projects--ProjectTemplate";
 import { ProjectInfo } from "./Projects--ProjectInfo";
 import axios from "axios";
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
 
 export const ProjectsMainIndex = () => {
     const [projects, setProjects] = useState([]);
@@ -33,15 +33,22 @@ export const ProjectsMainIndex = () => {
         getProjects()
     }, [])
 
+    //resetting states on modal close
+    const resetModal = () => {
+        setShowModal(false);
+        setClickedProject('')
+        document.getElementsByTagName('body')[0].classList.remove('overflow-hidden');
+        document.getElementsByTagName('body')[0].classList.add('overflow-auto');
+    }
+
     //closing modal on escape key
     const keyClose = useCallback(({ key }) => {
         if (key === 'Escape' && showModal) {
-            setShowModal(false);
-            setClickedProject('')
+            resetModal()
         }
-    }, [setShowModal, showModal])
+    }, [showModal])
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         document.addEventListener('keydown', keyClose);
         return () => {
             document.removeEventListener('keydown', keyClose);
@@ -52,8 +59,7 @@ export const ProjectsMainIndex = () => {
     const modalRef = useRef();
     const closeModal = ({ target }) => {
         if (modalRef.current === target) {
-            setShowModal(false);
-            setClickedProject('');
+            resetModal()
         }
     };
 
@@ -63,7 +69,7 @@ export const ProjectsMainIndex = () => {
             <div className="Projects">
                 {projects && projects.map(project => <ProjectTemplate key={project.id} setClickedProject={setClickedProject} setShowModal={setShowModal} project={project} />)}
             </div>
-            {showModal && clickedProject && <ProjectInfo projectName={clickedProject} showModal={showModal} modalRef={modalRef} closeModal={closeModal} setShowModal={setShowModal} setClickedProject={setClickedProject} />}
+            {showModal && clickedProject && <ProjectInfo projectName={clickedProject} resetModal={resetModal} showModal={showModal} modalRef={modalRef} closeModal={closeModal} setShowModal={setShowModal} setClickedProject={setClickedProject} />}
         </div>
     )
 }
