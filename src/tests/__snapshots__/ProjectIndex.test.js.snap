@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProjectIndex Page make snapshot of ProjectIndex page matches the snapshot 1`] = `ShallowWrapper {}`;
