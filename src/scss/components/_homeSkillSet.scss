@@ -15,3 +15,9 @@
         @apply pt-8 pb-12 mt-24;
     }
 }
+
+@media all and (max-width: 59px) {
+    .Home--SkillSet {
+        @apply mt-0 border-t-0;
+    }
+}
