@@ -1,6 +1,21 @@
 {
     "projects": [{
             "id": 1,
+            "name": "Reddit Client",
+            "image": "/images/projectimages/redditclient.png",
+            "backgroundColor": "#F80",
+            "thumbnailContent": {
+                "description": "This is a web application that retrieves data from reddit using it's api and allows users to view and search posts and comments provided by the api.",
+                "projectLink": "/projects/redditclient",
+                "toolsUsed": ["REDDIT API", "REACT", "TYPESCRIPT", "REDUX", "TAILWINDCSS", "SASS", "GSAP", "JEST", "ENZYME"]
+            },
+            "moreInformation": {
+                "websiteLink": "https://redditclient.netlify.app/",
+                "githubLink": "https://github.com/funmilolajire/redditclient"
+            }
+        },
+        {
+            "id": 2,
             "name": "Jammming",
             "image": "/images/projectimages/jammming.png",
             "backgroundColor": "#5132BD",
@@ -15,7 +30,7 @@
             }
         },
         {
-            "id": 2,
+            "id": 3,
             "name": "WITW",
             "image": "/images/projectimages/witw.png",
             "backgroundColor": "#F3603C",
