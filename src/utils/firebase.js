@@ -28,9 +28,3 @@ export const saveMessage = (name, email, message) => {
         message: message
     }, error => error ? "error" : "success")
 }
-
-// const projectsRef = db.ref('projects');
-
-// export const getProjects = () => {
-
-// }

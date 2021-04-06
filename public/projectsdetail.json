@@ -7,7 +7,7 @@
             "thumbnailContent": {
                 "description": "This is a web application that retrieves data from reddit using it's api and allows users to view and search posts and comments provided by the api.",
                 "projectLink": "/projects/redditclient",
-                "toolsUsed": ["REDDIT API", "REACT", "TYPESCRIPT", "REDUX", "TAILWINDCSS", "SASS", "GSAP", "JEST", "ENZYME"]
+                "toolsUsed": ["REDDIT API", "REACT", "TYPESCRIPT", "REDUX", "TAILWIND CSS", "SASS", "GSAP", "JEST", "ENZYME"]
             },
             "moreInformation": {
                 "websiteLink": "https://redditclient.netlify.app/",
@@ -42,6 +42,20 @@
             "moreInformation": {
                 "websiteLink": "https://whereindeworld.netlify.app/",
                 "githubLink": "https://github.com/funmilolajire/whereintheworldv2"
+            }
+        }, {
+            "id": 4,
+            "name": "Portfolio",
+            "image": "/images/projectimages/portfolio.png",
+            "backgroundColor": "#33323D",
+            "thumbnailContent": {
+                "description": "My personal portfolio project.",
+                "projectLink": "/projects/portfolio",
+                "toolsUsed": ["REACT", "SASS", "TAILWIND CSS", "FIREBASE", "FRAMER MOTION"]
+            },
+            "moreInformation": {
+                "websiteLink": "https://funmilolajire.netlify.app/",
+                "githubLink": "https://github.com/funmilolajire/portfolio"
             }
         }
     ]
