@@ -1,0 +1,39 @@
+.ContactMe--GiT {
+    @apply flex justify-between py-12 border-t border-gdb border-opacity-10;
+
+    h2 {
+        @apply text-5xl font-bold;
+    }
+
+    div {
+        @apply w-7/12;
+
+        p {
+            @apply pb-6 text-base opacity-80;
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .ContactMe--GiT {
+        @apply flex-col py-8;
+
+        h2 {
+            @apply text-4xl;
+        }
+
+        div {
+            @apply w-full;
+
+            p {
+                @apply py-6;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 590px) {
+    .ContactMe--GiT {
+        @apply pt-6 pb-8;
+    }
+}

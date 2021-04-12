@@ -1,0 +1,31 @@
+.logo {
+
+    h1 {
+        height: 100%;
+        line-height: 0;
+        transition: transform;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+
+        font: {
+            family: 'Lemonada',
+                cursive;
+            weight: bold;
+            size: 2.5rem;
+        }
+
+        &:hover {
+            transform: rotateZ(-25deg) scale(1.2);
+        }
+    }
+}
+
+@media all and (max-width: 768px) {
+    .logo {
+        h1{
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+}

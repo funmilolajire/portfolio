@@ -1,0 +1,23 @@
+.Home--SkillSet {
+    @apply pt-12 mt-32 border-t border-b pb-14 border-gdb border-opacity-10;
+
+    h2 {
+        @apply pb-4 text-4xl font-bold;
+    }
+
+    p {
+        @apply text-base;
+    }
+}
+
+@media all and (max-width: 780px) {
+    .Home--SkillSet {
+        @apply pt-8 pb-12 mt-24;
+    }
+}
+
+@media all and (max-width: 590px) {
+    .Home--SkillSet {
+        @apply mt-0 border-t-0;
+    }
+}
