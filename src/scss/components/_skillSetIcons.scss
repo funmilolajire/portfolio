@@ -1,13 +1,15 @@
 .SkillSetIcons {
     @apply grid items-center grid-flow-row grid-rows-2 gap-10 pt-10 grid-cols-autoFitSkillSet justify-items-center;
 
-    figure {
-        svg {
-            @apply w-20 h-20;
-        }
+    span.icon {
+        @apply text-7xl;
+    }
 
-        figcaption {
-            @apply text-center break-words text-sm pt-4 font-bold;
+    div {
+        @apply flex flex-col items-center;
+
+        span.label {
+            @apply text-center uppercase break-words text-sm pt-4 font-bold;
         }
     }
 }
@@ -28,12 +30,8 @@
     .SkillSetIcons {
         @apply gap-x-6 gap-y-10;
 
-        figure {
-            svg {
-                @apply w-20 h-16 justify-center;
-            }
-
-            figcaption {
+        div {
+            span.label {
                 @apply pt-3 font-bold;
             }
         }
@@ -44,10 +42,8 @@
     .SkillSetIcons {
         @apply gap-x-4;
 
-        figure {
-            svg {
-                @apply w-20 h-14;
-            }
+        span.icon {
+            @apply text-6xl;
         }
     }
 }
@@ -55,11 +51,5 @@
 @media all and (max-width: 405px) {
     .SkillSetIcons {
         @apply gap-x-2;
-
-        figure {
-            svg {
-                @apply w-20 h-10 justify-center;
-            }
-        }
     }
 }

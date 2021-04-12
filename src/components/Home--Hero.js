@@ -1,14 +1,22 @@
 export const Hero = () => (
     <div className="Home--Hero">
         <picture className="Hero--Image">
-            <source media="(min-width: 880px)"
+            {/* <source media="(min-width: 880px)"
                 srcset="/images/homepage/desktop/image-homepage-hero.jpg,
                 /images/homepage/desktop/image-homepage-hero@2x.jpg 2x" />
             <source media="(min-width: 590px)"
                 srcset="/images/homepage/tablet/image-homepage-hero.jpg,
                 /images/homepage/tablet/image-homepage-hero@2x.jpg 2x" />
             <img loading="lazy" alt="home-hero" srcset="/images/homepage/mobile/image-homepage-hero.jpg,
-                /images/homepage/mobile/image-homepage-hero@2x.jpg 2x"/>
+                /images/homepage/mobile/image-homepage-hero@2x.jpg 2x"/> */}
+            <source media="(min-width: 880px)"
+                srcset="/images/homepage/desktop/home-hero-desktop.png,
+                /images/homepage/desktop/home-hero-desktop@2x.png 2x" />
+            <source media="(min-width: 590px)"
+                srcset="/images/homepage/tablet/home-hero-tablet.png,
+                /images/homepage/tablet/home-hero-tablet@2x.png 2x" />
+            <img loading="lazy" alt="home-hero" srcset="/images/homepage/mobile/home-hero-mobile.png,
+                /images/homepage/mobile/home-hero-mobile@2x.png 2x"/>
         </picture>
         <section className="Hero--TextContent">
             <h1>Hey, I'm <span>Funmilola.</span> A frontend developer.</h1>
@@ -27,7 +35,7 @@ export const Hero = () => (
 
                     <span>
                         About Me
-                </span>
+                    </span>
                 </a>
             </div>
         </section>
