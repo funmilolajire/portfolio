@@ -1,0 +1,148 @@
+.ProjectInfo {
+    @apply fixed top-0 flex items-center justify-center w-screen h-screen bg-gdb bg-opacity-70;
+    z-index: 1200;
+
+    div.Modal {
+        @apply text-gdb relative flex bg-gray-50;
+
+        div.Image {
+            @apply w-1/2 pt-8 px-9 relative overflow-hidden;
+
+            figure {
+                @apply relative h-full aspect-h-16 aspect-w-9;
+
+                img {
+                    @apply w-full h-full object-fill transform-gpu absolute inset-0;
+                }
+            }
+        }
+
+        section.Content {
+            @apply w-1/2 pt-12 px-8;
+
+            h2 {
+                @apply pb-4 text-4xl font-bold;
+            }
+
+            // p.background {
+            //     @apply pb-4 text-base;
+            // }
+
+            p.description {
+                @apply pb-5 text-base;
+            }
+
+            div.tools {
+                @apply pb-10 w-full;
+
+                span.title {
+                    @apply mr-1;
+                }
+
+                div {
+                    @apply inline-flex mt-1 flex-wrap break-words gap-2;
+
+                    span.tool {
+                        @apply bg-gdb text-white shadow-xl rounded-md p-1 lowercase;
+                    }
+                }
+            }
+
+            div.buttons {
+                @apply flex space-x-8;
+
+                a {
+                    button {
+                        @apply h-12 uppercase transition-colors duration-500 border border-gdb w-44;
+                        letter-spacing: 2px;
+
+                        &:hover {
+                            @apply bg-gdb text-white;
+                        }
+
+                        &:focus {
+                            @apply outline-none ring-1 ring-green-500;
+                        }
+                    }
+                }
+            }
+
+            span.CloseModal {
+                @apply absolute top-0 right-0 m-1 text-4xl cursor-pointer text-gdb opacity-70;
+
+                &:hover {
+                    @apply opacity-100;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .ProjectInfo {
+        div.Modal {
+
+            div.Image {
+                @apply pt-2 px-3;
+            }
+
+            section.Content {
+                @apply pt-10 px-4;
+
+                div.buttons {
+                    @apply flex-col space-x-0 space-y-4;
+
+                    a {
+                        @apply w-full;
+
+                        button {
+                            @apply w-full;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width:1000px) {
+    .ProjectInfo {
+        div.Modal {
+            height: 100vh;
+            width: 100vw;
+        }
+    }
+}
+
+@media all and (max-width:800px) {
+    .ProjectInfo {
+        @apply bg-gray-50 h-full overflow-auto;
+
+        div.Modal {
+            @apply flex-col h-full;
+
+            div.Image {
+                @apply h-1/2 w-full pt-8 px-9;
+
+                figure {
+
+                    img {
+                        @apply object-fill h-full;
+                    }
+                }
+            }
+
+            section.Content {
+                @apply w-full h-1/2 pt-12 px-8;
+
+                div.buttons {
+                    @apply pb-12;
+                }
+
+                span.CloseModal {
+                    @apply fixed;
+                }
+            }
+        }
+    }
+}

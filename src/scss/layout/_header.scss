@@ -1,0 +1,35 @@
+header {
+    span.menuIcon {
+        @apply hidden;
+    }
+
+    nav {
+        @apply text-xs font-bold uppercase;
+        letter-spacing: 2px;
+
+        ul {
+            @apply flex items-center space-x-20;
+        }
+    }
+}
+
+@media all and (max-width: 590px) {
+    header {
+        @apply relative;
+
+        span.menuIcon {
+            @apply inline-block;
+        }
+
+
+        nav {
+            @apply absolute w-56 h-48 text-white bg-gdb mt-24 top-0 right-0;
+            z-index: 1100;
+            animation: fade-in-right 0.7s cubic-bezier(0.165, 0.840, 0.440, 1.000) alternate both;
+
+            ul {
+                @apply flex-col space-x-0 justify-center h-full space-y-8;
+            }
+        }
+    }
+}

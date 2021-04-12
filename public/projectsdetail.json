@@ -1,0 +1,62 @@
+{
+    "projects": [{
+            "id": 1,
+            "name": "Reddit Client",
+            "image": "/images/projectimages/redditclient.png",
+            "backgroundColor": "#F80",
+            "thumbnailContent": {
+                "description": "This is a web application that retrieves data from reddit using it's api and allows users to view and search posts and comments provided by the api.",
+                "projectLink": "/projects/redditclient",
+                "toolsUsed": ["REDDIT API", "REACT", "TYPESCRIPT", "REDUX", "TAILWIND CSS", "SASS", "GSAP", "JEST", "ENZYME"]
+            },
+            "moreInformation": {
+                "websiteLink": "https://redditclient.netlify.app/",
+                "githubLink": "https://github.com/funmilolajire/redditclient"
+            }
+        },
+        {
+            "id": 2,
+            "name": "Jammming",
+            "image": "/images/projectimages/jammming.png",
+            "backgroundColor": "#5132BD",
+            "thumbnailContent": {
+                "description": "A website that allows users to search the Spotify library, create a custom playlist, then save it to their Spotify account. A remake of a previous project written using class components, did this remake to practice using functional components, hooks, testing using jest and enzyme, writing code with accessibility in mind and writing a good README document.",
+                "projectLink": "/projects/jammming",
+                "toolsUsed": ["SPOTIFY API", "REACT", "CSS", "JEST", "ENZYME"]
+            },
+            "moreInformation": {
+                "websiteLink": "https://jammmingv2.netlify.app/",
+                "githubLink": "https://github.com/funmilolajire/jammmingv2"
+            }
+        },
+        {
+            "id": 3,
+            "name": "WITW",
+            "image": "/images/projectimages/witw.png",
+            "backgroundColor": "#F3603C",
+            "thumbnailContent": {
+                "description": "WITW(whereintheworld) is a progressive web app that pulls data from rest countries api and displays it to the user on first visit, the user can search for countries and filter countries by region, it also has a color theme switcher so the user can choose between lightmode or darkmode and it recalls on their next visit.",
+                "projectLink": "/projects/witw",
+                "toolsUsed": ["REACT", "RESTCOUNTRIES API", "TAILWIND CSS"]
+            },
+            "moreInformation": {
+                "websiteLink": "https://whereindeworld.netlify.app/",
+                "githubLink": "https://github.com/funmilolajire/whereintheworldv2"
+            }
+        }, {
+            "id": 4,
+            "name": "Portfolio",
+            "image": "/images/projectimages/portfolio.png",
+            "backgroundColor": "#33323D",
+            "thumbnailContent": {
+                "description": "My personal portfolio project.",
+                "projectLink": "/projects/portfolio",
+                "toolsUsed": ["REACT", "SASS", "TAILWIND CSS", "FIREBASE", "FRAMER MOTION"]
+            },
+            "moreInformation": {
+                "websiteLink": "https://funmilolajire.netlify.app/",
+                "githubLink": "https://github.com/funmilolajire/portfolio"
+            }
+        }
+    ]
+}

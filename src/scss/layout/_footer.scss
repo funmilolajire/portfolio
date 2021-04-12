@@ -1,0 +1,70 @@
+footer {
+    @apply box-border flex items-center justify-between h-32 px-40 py-6 -mx-40 bg-gdb;
+
+    section {
+        @apply flex items-center;
+
+        nav {
+            @apply text-xs font-bold text-white uppercase;
+            letter-spacing: 2px;
+
+            ul {
+                @apply flex items-center pl-12 space-x-10;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 940px) {
+    footer {
+        @apply px-20 -mx-20;
+    }
+}
+
+@media all and (max-width: 880px) {
+    footer {
+        @apply px-10 -mx-10;
+    }
+}
+
+@media all and (max-width: 685px) {
+    footer {
+        section {
+            nav {
+                ul {
+                    @apply pl-10 space-x-8;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 650px) {
+    footer {
+        section {
+            nav {
+                ul {
+                    @apply pl-5 space-x-5;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 590px) {
+    footer {
+        @apply px-8 -mx-8 py-14 justify-center h-full flex-col;
+
+        section {
+            @apply flex-col justify-center;
+
+            nav {
+                @apply pb-10 pt-9;
+
+                ul {
+                    @apply flex-col justify-center space-y-8 space-x-0 pl-0;
+                }
+            }
+        }
+    }
+}

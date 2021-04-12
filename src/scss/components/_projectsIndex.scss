@@ -1,0 +1,19 @@
+.ProjectsIndex {
+    @apply relative;
+
+    h2 {
+        @apply pb-4 text-5xl font-bold text-center mb-14;
+    }
+
+    div.Projects {
+        @apply relative grid grid-flow-row justify-items-center grid-cols-autoFit gap-14 auto-rows-fr auto-cols-min;
+    }
+}
+
+@media all and (max-width: 985px) {
+    .ProjectsIndex {
+        div.Projects {
+            @apply grid-cols-autoFitMin gap-10;
+        }
+    }
+}

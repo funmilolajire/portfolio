@@ -1,0 +1,173 @@
+.Home--Hero {
+    @apply relative;
+
+    picture {
+        @apply w-full;
+
+        img {
+            @apply w-full;
+        }
+    }
+
+    section.Hero--TextContent {
+        @apply absolute bottom-0 left-0 w-5/12 bg-gray-50;
+
+        h1 {
+            @apply py-12 pr-5 text-5xl font-bold;
+
+            span {
+                @apply text-transparent bg-gradient-to-r bg-clip-text from-name1 to-name2;
+            }
+        }
+
+        div {
+            @apply flex items-center w-48 h-12 text-center uppercase duration-700 ease-in-out cursor-default text-sdc bg-db;
+            letter-spacing: 2px;
+
+            &:hover {
+                @apply text-white bg-sdc;
+            }
+
+            &:focus {
+                @apply outline-none ring-1 ring-sdc;
+            }
+
+            a {
+                @apply flex items-center justify-center w-full h-full;
+
+                span:first-child {
+                    @apply flex items-center justify-center w-12 h-12 bg-black bg-opacity-10;
+
+                    svg {
+                        g {
+                            @apply stroke-current;
+                        }
+                    }
+                }
+
+                span:last-child {
+                    @apply w-9/12 text-white;
+                }
+            }
+
+        }
+    }
+}
+
+@media all and (max-width: 1300px) {
+    .Home--Hero {
+        section.Hero--TextContent {
+            @apply w-6/12;
+
+            h1 {
+                @apply py-10 pr-2;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1260px) {
+    .Home--Hero {
+        section.Hero--TextContent {
+            @apply w-7/12;
+        }
+    }
+}
+
+@media all and (max-width: 1130px) {
+    .Home--Hero {
+        section.Hero--TextContent {
+            @apply w-8/12;
+
+            h1 {
+                @apply py-8;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1030px) {
+    .Home--Hero {
+        section.Hero--TextContent {
+            @apply w-9/12;
+
+            h1 {
+                @apply py-2 pr-1;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 943px) {
+    .Home--Hero {
+        section.Hero--TextContent {
+            @apply w-10/12;
+        }
+    }
+}
+
+@media all and (max-width: 940px) {
+    .Home--Hero {
+        section.Hero--TextContent {
+            @apply w-8/12;
+
+            h1 {
+                @apply py-4 pr-2;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 880px) {
+    .Home--Hero {
+        section.Hero--TextContent {
+            @apply w-8/12;
+
+            h1 {
+                @apply py-6;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 786px) {
+    .Home--Hero {
+        section.Hero--TextContent {
+            @apply w-9/12;
+        }
+    }
+}
+
+@media all and (max-width: 710px) {
+    .Home--Hero {
+        section.Hero--TextContent {
+            @apply w-10/12;
+        }
+    }
+}
+
+@media all and (max-width: 648px) {
+    .Home--Hero {
+        section.Hero--TextContent {
+            @apply w-11/12;
+        }
+    }
+}
+
+@media all and (max-width: 696px) {
+    .Home--Hero {
+        section.Hero--TextContent {
+            @apply w-full relative;
+
+            h1 {
+                @apply pr-0;
+            }
+
+            div {
+                &:hover {
+                    @apply text-sdc bg-db;
+                }
+            }
+        }
+    }
+}

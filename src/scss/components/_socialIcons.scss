@@ -1,0 +1,23 @@
+.SocialIcons {
+    @apply flex items-center space-x-4;
+
+    li {
+        @apply duration-700 transform-gpu;
+
+        &:hover {
+            @apply -translate-y-1;
+        }
+    }
+}
+
+@media all and (min-width: 590px) and (max-width: 610px) {
+    .SocialIcons {
+        @apply space-x-3;
+    }
+}
+
+@media all and (max-width: 590px) {
+    .SocialIcons {
+        @apply space-x-5 min-h-full;
+    }
+}
