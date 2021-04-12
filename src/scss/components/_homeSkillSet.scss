@@ -12,12 +12,6 @@
 
 @media all and (max-width: 780px) {
     .Home--SkillSet {
-        @apply pt-8 pb-12 mt-24;
-    }
-}
-
-@media all and (max-width: 590px) {
-    .Home--SkillSet {
-        @apply mt-0 border-t-0;
+        @apply pt-8 pb-14 mt-14;
     }
 }

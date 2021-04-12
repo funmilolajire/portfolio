@@ -1,27 +1,27 @@
 .Home--About {
     @apply flex pt-12 mt-24;
 
-    picture {
-        @apply w-1/2 overflow-hidden;
+    // picture {
+    //     @apply w-1/2 overflow-hidden;
 
-        img {
-            @apply object-fill w-full h-full;
-        }
-    }
+    //     img {
+    //         @apply object-fill w-full h-full;
+    //     }
+    // }
 
     article {
-        @apply w-1/2 pb-12 ml-32 border-t border-b pt-14 max-w-max border-gdb border-opacity-10;
+        @apply text-center w-full;
 
         h2 {
             @apply text-4xl font-bold;
         }
 
         p {
-            @apply pb-6 text-base w-80 text-left break-words pt-7 opacity-80;
+            @apply pb-6 text-base w-2/3 text-center mx-auto break-words pt-7 opacity-80;
         }
 
         button {
-            @apply h-12 text-xs font-bold uppercase transition-all duration-500 ease-in border w-52 transform-gpu border-opacity-80 border-gdb;
+            @apply h-12 text-xs font-bold uppercase transition-all duration-300 ease-in border w-52 transform-gpu border-opacity-80 border-gdb;
             letter-spacing: 2px;
 
             &:hover {
@@ -69,16 +69,16 @@
 
 @media all and (max-width: 590px) {
     .Home--About {
-        @apply flex-col;
+        @apply flex-col mt-0;
 
-        picture {
-            @apply w-full;
+        // picture {
+        //     @apply w-full;
 
-            img {}
-        }
+        //     img {}
+        // }
 
         article {
-            @apply ml-0 mt-8 w-full pt-8;
+            @apply ml-0 border-t border-opacity-30 w-full pt-8;
 
             p {
                 @apply w-full;
