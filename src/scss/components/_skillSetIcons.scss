@@ -50,6 +50,10 @@
 
 @media all and (max-width: 405px) {
     .SkillSetIcons {
-        @apply gap-x-2;
+        @apply gap-x-0;
+
+        span.icon {
+            @apply text-6xl;
+        }
     }
 }

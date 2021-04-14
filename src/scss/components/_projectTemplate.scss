@@ -33,8 +33,9 @@
         @apply box-border relative flex justify-center h-full pt-8 px-9;
 
         img {
+            -webkit-filter: drop-shadow(20px 20px 0px rgba(0, 0, 0, 0.147563));
             filter: drop-shadow(20px 20px 0px rgba(0, 0, 0, 0.147563));
-            @apply w-full h-full object-fill transition-all duration-700;
+            @apply w-full max-h-full object-fill transition-all duration-700;
 
         }
     }

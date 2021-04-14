@@ -1,7 +1,10 @@
 import { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { Logo } from './Logo';
 import { IoMenuOutline, IoCloseOutline } from 'react-icons/io5';
+import { Logo } from './Logo';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 export const Header = () => {
     const [mobileMenu, setMobileMenu] = useState(false)
@@ -22,8 +25,8 @@ export const Header = () => {
             <Logo fillColor="#33323D" />
             <span onClick={handleMenuOpen} className="menuIcon">
                 {!mobileMenu
-                    ? <IoMenuOutline data-menu className="text-3xl cursor-pointer menu" />
-                    : <IoCloseOutline data-menu-close className="text-3xl cursor-pointer close" />
+                    ? <IoMenuOutline data-menu className="menu text-3xl cursor-pointer" />
+                    : <IoCloseOutline data-menu-close className="close text-3xl cursor-pointer" />
                 }
             </span>
 

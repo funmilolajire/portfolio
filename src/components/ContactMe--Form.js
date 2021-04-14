@@ -1,5 +1,10 @@
 import { useState } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import { saveMessage } from '../utils/firebase';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useLocation } from 'react-router-dom';
+gsap.registerPlugin(ScrollTrigger);
 
 export const ContactForm = () => {
     const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -52,10 +57,55 @@ export const ContactForm = () => {
         }
     }
 
+    //animations
+    const formBoxRef = useRef(null);
+    const formInputsRef = useRef(null);
+    const formHeadingRef = useRef(null);
+    const location = useLocation()
+
+    useLayoutEffect(() => {
+        if (location.pathname === '/contact-me')
+            gsap.from([formInputsRef.current], {
+                scrollTrigger: {
+                    trigger: [formBoxRef.current],
+                    toggleActions: "restart none restart none",
+                },
+                opacity: 0,
+                x: '100vw',
+                duration: 1,
+            })
+    })
+    useLayoutEffect(() => {
+        if (location.pathname === '/contact-me')
+
+            gsap.from([formHeadingRef.current], {
+                scrollTrigger: {
+                    trigger: [formBoxRef.current],
+                    toggleActions: "restart none restart none",
+                },
+                opacity: 0,
+                x: '-100vw',
+                duration: 1
+            })
+        gsap.from(".field", {
+            scrollTrigger: {
+                trigger: [formBoxRef.current],
+                toggleActions: "restart none restart none",
+            },
+            opacity: 0,
+            scale: 1.2,
+            duration: 1,
+            delay: 2,
+            stagger: {
+                amount: 2
+            }
+        })
+    })
+
     return (
-        <section className="ContactMe--Form">
-            <h2>Contact Me</h2>
-            <form onSubmit={handleSubmit} method="post" name="portfolio-contact-form" id="portfolio-contact-form">
+        <section ref={formBoxRef} className="ContactMe--Form">
+            <h2 ref={formHeadingRef}>Contact Me</h2>
+            <form ref={formInputsRef} onSubmit={handleSubmit} method="post" name="portfolio-contact-form" id="portfolio-contact-form">
                 <div className="hidden" data-submission-success>
                     <p><span>✔
                     </span>Your Form Has Been Successfully Submitted</p>

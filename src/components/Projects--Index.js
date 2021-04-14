@@ -2,11 +2,32 @@ import { ProjectTemplate } from "./Projects--ProjectTemplate";
 import { ProjectInfo } from "./Projects--ProjectInfo";
 import axios from "axios";
 import { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 export const ProjectsMainIndex = () => {
     const [projects, setProjects] = useState([]);
     const [showModal, setShowModal] = useState(true);
     const [clickedProject, setClickedProject] = useState('');
+
+    //animations
+    const projectsBoxRef = useRef(null);
+    const projectsHeadingRef = useRef(null);
+    useLayoutEffect(() => {
+        gsap.from(".ProjectTemplate", {
+            scrollTrigger: {
+                trigger: [projectsBoxRef.current],
+                toggleActions: "restart none none none",
+            },
+            opacity: 0,
+            scale: 1.1,
+            duration: 1,
+            stagger: {
+                amount: 2
+            }
+        })
+    })
 
     const getProjects = async () => {
 
@@ -64,8 +85,8 @@ export const ProjectsMainIndex = () => {
     };
 
     return (
-        <div className="ProjectsIndex">
-            <h2>Projects</h2>
+        <div ref={projectsBoxRef} className="ProjectsIndex">
+            <h2 ref={projectsHeadingRef}>Projects</h2>
             <div className="Projects">
                 {projects && projects.map(project => <ProjectTemplate key={project.id} setClickedProject={setClickedProject} setShowModal={setShowModal} project={project} />)}
             </div>

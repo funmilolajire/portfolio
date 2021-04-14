@@ -1,3 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContactMe Page make snapshot of ContactMe page matches the snapshot 1`] = `ShallowWrapper {}`;
+exports[`ContactMe Page make snapshot of ContactMe page matches the snapshot 1`] = `
+<Layout
+  pageMeta={
+    Object {
+      "title": "Contact Me",
+    }
+  }
+>
+  <GetInTouch />
+  <ContactForm />
+</Layout>
+`;

@@ -1,3 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ProjectIndex Page make snapshot of ProjectIndex page matches the snapshot 1`] = `ShallowWrapper {}`;
+exports[`ProjectIndex Page make snapshot of ProjectIndex page matches the snapshot 1`] = `
+<Layout
+  pageMeta={
+    Object {
+      "title": "Projects",
+    }
+  }
+>
+  <ProjectsMainIndex />
+</Layout>
+`;
