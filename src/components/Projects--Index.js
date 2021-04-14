@@ -18,7 +18,7 @@ export const ProjectsMainIndex = () => {
         gsap.from(".ProjectTemplate", {
             scrollTrigger: {
                 trigger: [projectsBoxRef.current],
-                toggleActions: "restart none none none",
+                // toggleActions: "restart none none none",
             },
             opacity: 0,
             scale: 1.1,
