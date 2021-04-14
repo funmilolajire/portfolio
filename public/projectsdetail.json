@@ -51,7 +51,7 @@
             "thumbnailContent": {
                 "description": "My personal portfolio project.",
                 "projectLink": "/projects/portfolio",
-                "toolsUsed": ["REACT", "SASS", "TAILWIND CSS", "FIREBASE", "FRAMER MOTION"]
+                "toolsUsed": ["REACT", "SASS", "TAILWIND CSS", "FIREBASE", "GSAP"]
             },
             "moreInformation": {
                 "websiteLink": "https://funmilolajire.netlify.app/",
