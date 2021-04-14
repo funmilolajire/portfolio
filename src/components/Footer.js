@@ -1,6 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import { SocialIcons } from './SocialIcons';
 import { Logo } from './Logo';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 export const Footer = () => (
     <footer>

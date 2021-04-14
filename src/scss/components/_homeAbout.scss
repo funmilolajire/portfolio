@@ -37,31 +37,13 @@
 
 @media all and (max-width: 1120px) {
     .Home--About {
-        article {
-            @apply pt-16 ml-16;
-        }
-    }
-}
+        @apply mt-0;
 
-@media all and (max-width: 790px) {
-    .Home--About {
         article {
-            @apply ml-14;
+            @apply pt-16;
 
             p {
-                @apply w-72;
-            }
-        }
-    }
-}
-
-@media all and (max-width: 640px) {
-    .Home--About {
-        article {
-            @apply ml-12;
-
-            p {
-                @apply w-64;
+                @apply w-10/12;
             }
         }
     }
@@ -69,13 +51,8 @@
 
 @media all and (max-width: 590px) {
     .Home--About {
-        @apply flex-col mt-0;
-
-        // picture {
-        //     @apply w-full;
-
-        //     img {}
-        // }
+        @apply flex-col;
+        @apply w-full;
 
         article {
             @apply ml-0 border-t border-opacity-30 w-full pt-8;

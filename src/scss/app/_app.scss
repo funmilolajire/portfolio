@@ -1,5 +1,5 @@
 .App {
-    @apply px-40 text-gdb bg-gray-50;
+    @apply px-40 overflow-x-hidden text-gdb bg-gray-50;
     min-height: 100vh;
 
     @media all and (max-width: 940px) {
