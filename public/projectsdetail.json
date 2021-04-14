@@ -5,7 +5,7 @@
             "image": "/images/projectimages/redditclient.png",
             "backgroundColor": "#F80",
             "thumbnailContent": {
-                "description": "This is a web application that retrieves data from reddit using its API and allows users to view and search posts and comments provided by the api.",
+                "description": "This is a web application that retrieves data from reddit using its API and allows users to view and search posts and comments provided by the API.",
                 "projectLink": "/projects/redditclient",
                 "toolsUsed": ["REDDIT API", "REACT", "TYPESCRIPT", "REDUX", "TAILWIND CSS", "SASS", "GSAP", "JEST", "ENZYME"]
             },
