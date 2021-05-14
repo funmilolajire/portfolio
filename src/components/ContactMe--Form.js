@@ -99,7 +99,7 @@ export const ContactForm = () => {
         <section ref={formBoxRef} className="ContactMe--Form">
             <h2 ref={formHeadingRef}>Contact Me</h2>
             <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
-                {({ isSubmitting }) => <Form ref={formInputsRef} id="contact-form" name="contact-form" netlify>
+                <Form ref={formInputsRef} id="contact-form" name="contact-form" netlify>
                     {isSubmit === 'ok' && <div data-submission-success>
                         <p><span>✔
                         </span>Your Form Has Been Successfully Submitted!</p>
@@ -118,7 +118,7 @@ export const ContactForm = () => {
                         <TextInput label="Message" as="textarea" name="message" cols="30" rows="10" placeholder="How can I help?" />
                     </div>
                     {loading ? <button type="button"><div className="spinner-4"></div></button> : <button type="submit">Send Message</button>}
-                </Form>}
+                </Form>
             </Formik>
         </section>
     )
