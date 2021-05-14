@@ -96,7 +96,7 @@ export const ContactForm = () => {
         <section ref={formBoxRef} className="ContactMe--Form">
             <h2 ref={formHeadingRef}>Contact Me</h2>
             <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
-                <Form ref={formInputsRef} id="contact-form">
+                <Form ref={formInputsRef} id="contact-form" netlify>
                     {isSubmit === 'ok' && <div data-submission-success>
                         <p><span>✔
                         </span>Your Form Has Been Successfully Submitted!</p>
