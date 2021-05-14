@@ -1,62 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRef, useLayoutEffect } from 'react';
-import { saveMessage } from '../utils/firebase';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import emailjs from 'emailjs-com';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLocation } from 'react-router-dom';
+import { TextInput } from './TextInput';
 gsap.registerPlugin(ScrollTrigger);
 
 export const ContactForm = () => {
-    const [form, setForm] = useState({ name: '', email: '', message: '' })
-    const { name, email, message } = form;
-
-    const handleFormError = fieldData => {
-        const fieldName = document.querySelector("[data-" + fieldData + "]")
-        fieldName.classList.remove('focus:ring-green-500')
-        fieldName.classList.add('focus:ring-red-500')
-        fieldName.focus()
-    }
-    const handleFormSuccess = fieldData => {
-        const fieldName = document.querySelector("[data-" + fieldData + "]")
-        if ((fieldName.classList).contains('focus:ring-red-500')) {
-            fieldName.classList.remove('focus:ring-red-500')
-            fieldName.classList.add('focus:ring-green-500')
-        }
-    }
-    const handleChange = ({ target }) => {
-        setForm(prev => ({
-            ...prev,
-            [target.name]: target.value
-        }))
-        if (target.name || email.includes('@')) {
-            handleFormSuccess(`${target.name}`)
-        }
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const successMessage = document.querySelector("[data-submission-success]")
-        const errorMessage = document.querySelector("[data-submission-error]")
-        if (!name || !email || !message) {
-            console.log(errorMessage.classList)
-            errorMessage.classList.remove("hidden")
-            !message ? handleFormError("message") : handleFormSuccess("message");
-            !email ? handleFormError("email") : handleFormSuccess("email");
-            !name ? handleFormError("name") : handleFormSuccess("name");
-        } else {
-            if (!errorMessage.classList.contains("hidden")) {
-                errorMessage.classList.add("hidden")
-            }
-            saveMessage(name, email, message);
-            setForm({ name: '', email: '', message: '' });
-            successMessage.classList.remove("hidden")
-            successMessage.scrollIntoView()
-            setTimeout(() => {
-                successMessage.classList.add("hidden")
-            }, 5000)
-        }
-    }
-
     //animations
     const formBoxRef = useRef(null);
     const formInputsRef = useRef(null);
@@ -74,7 +27,7 @@ export const ContactForm = () => {
                 x: '100vw',
                 duration: 1,
             })
-    })
+    }, [])
     useLayoutEffect(() => {
         if (location.pathname === '/contact-me')
 
@@ -100,34 +53,70 @@ export const ContactForm = () => {
                 amount: 2
             }
         })
+    }, [])
+
+    const [isSubmit, setSubmit] = useState(null)
+    const initialValues = {
+        from_name: '',
+        email: '',
+        message: ''
+    }
+    const validationSchema = Yup.object().shape({
+        from_name: Yup.string().max(50, 'must be 50 characters or less').required('can\'t be empty'),
+        email: Yup.string().email('invalid email address').max(50, 'must be 50 characters or less').required('can\'t be empty'),
+        message: Yup.string().required('leave me a message'),
     })
+    const onSubmit = async (values, { setSubmitting, resetForm }) => {
+        try {
+            await emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICEID,
+                process.env.REACT_APP_EMAILJS_TEMPLATEID,
+                '#contact-form',
+                process.env.REACT_APP_EMAILJS_USERID)
+                .then((result) => {
+                    setSubmit('ok')
+                    console.log(result.text);
+                    resetForm()
+                }, (error) => {
+                    setSubmit('error')
+                    console.log(error.text);
+                });
+            setSubmitting(false);
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    useEffect(() => {
+        const isSubmitResult = setTimeout(() => setSubmit(null), 3000)
+        return () => {
+            clearTimeout(isSubmitResult)
+        }
+    }, [isSubmit])
 
     return (
         <section ref={formBoxRef} className="ContactMe--Form">
             <h2 ref={formHeadingRef}>Contact Me</h2>
-            <form ref={formInputsRef} onSubmit={handleSubmit} method="post" name="portfolio-contact-form" id="portfolio-contact-form">
-                <div className="hidden" data-submission-success>
-                    <p><span>✔
-                    </span>Your Form Has Been Successfully Submitted</p>
-                </div>
-                <div className="hidden" data-submission-error>
-                    <p><span>❌
-                    </span>Fill all required fields</p>
-                </div>
-                <div className="field name">
-                    <label htmlFor="name">Name *</label>
-                    <input data-name value={name} onChange={handleChange} className="focus:ring-green-500" type="text" name="name" id="name" placeholder="Enter name here..." />
-                </div>
-                <div className="email field">
-                    <label htmlFor="email">Email Address *</label>
-                    <input value={email} data-email onChange={handleChange} className="focus:ring-green-500" type="email" name="email" id="email" placeholder="Enter email here..." />
-                </div>
-                <div className="message field">
-                    <label htmlFor="message">Message *</label>
-                    <textarea value={message} data-message onChange={handleChange} className="focus:ring-green-500" name="message" id="message" cols="30" rows="10" placeholder="How can I help?"></textarea>
-                </div>
-                <button name="submit" type="submit">Send Message</button>
-            </form>
+            <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
+                <Form ref={formInputsRef} id="contact-form">
+                    {isSubmit === 'ok' && <div data-submission-success>
+                        <p><span>✔
+                        </span>Your Form Has Been Successfully Submitted!</p>
+                    </div>}
+                    {isSubmit && isSubmit === 'error' && <div data-submission-error>
+                        <p><span>❌
+                        </span>An error occurred! Please try again.</p>
+                    </div>}
+                    <div className="field from_name">
+                        <TextInput label="Name" type="text" name="from_name" placeholder="Enter name here..." />
+                    </div>
+                    <div className="email field">
+                        <TextInput label="Email Address" type="email" name="email" placeholder="Enter email here..." />
+                    </div>
+                    <div className="message field">
+                        <TextInput label="Message" as="textarea" name="message" cols="30" rows="10" placeholder="How can I help?" />
+                    </div>
+                    <button type="submit">Send Message</button>
+                </Form>
+            </Formik>
         </section>
     )
 }
