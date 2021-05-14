@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRef, useLayoutEffect } from 'react';
-import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 import gsap from 'gsap';
