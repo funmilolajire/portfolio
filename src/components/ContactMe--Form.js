@@ -56,6 +56,7 @@ export const ContactForm = () => {
     }, [])
 
     const [isSubmit, setSubmit] = useState(null)
+    const [loading, setLoading] = useState(false)
     const initialValues = {
         from_name: '',
         email: '',
@@ -68,6 +69,7 @@ export const ContactForm = () => {
     })
     const onSubmit = async (values, { setSubmitting, resetForm }) => {
         try {
+            setLoading(true)
             await emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICEID,
                 process.env.REACT_APP_EMAILJS_TEMPLATEID,
                 '#contact-form',
@@ -80,7 +82,8 @@ export const ContactForm = () => {
                     setSubmit('error')
                     console.log(error.text);
                 });
-            setSubmitting(false);
+            setLoading(false)
+            setSubmitting(false)
         } catch (e) {
             console.log(e)
         }
@@ -96,7 +99,7 @@ export const ContactForm = () => {
         <section ref={formBoxRef} className="ContactMe--Form">
             <h2 ref={formHeadingRef}>Contact Me</h2>
             <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
-                <Form ref={formInputsRef} id="contact-form" netlify>
+                {({ isSubmitting }) => <Form ref={formInputsRef} id="contact-form" name="contact-form" netlify>
                     {isSubmit === 'ok' && <div data-submission-success>
                         <p><span>✔
                         </span>Your Form Has Been Successfully Submitted!</p>
@@ -114,8 +117,8 @@ export const ContactForm = () => {
                     <div className="message field">
                         <TextInput label="Message" as="textarea" name="message" cols="30" rows="10" placeholder="How can I help?" />
                     </div>
-                    <button type="submit">Send Message</button>
-                </Form>
+                    {loading ? <button type="button"><div className="spinner-4"></div></button> : <button type="submit">Send Message</button>}
+                </Form>}
             </Formik>
         </section>
     )
