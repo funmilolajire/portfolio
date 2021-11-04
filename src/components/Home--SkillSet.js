@@ -16,11 +16,12 @@ export const SkillSet = () => {
             gsap.from([skillSetsHeadingRef.current], {
                 scrollTrigger: {
                     trigger: [skillSetsBoxRef.current],
-                    toggleActions: "restart none restart none",
+                    toggleActions: "restart none none reset",
+                    start: "center bottom"
                 },
                 y: -50,
                 opacity: 0,
-                duration: 2,
+                duration: 0.5,
             })
     })
 
@@ -29,11 +30,13 @@ export const SkillSet = () => {
             gsap.from([skillSetsParagraphRef.current], {
                 scrollTrigger: {
                     trigger: [skillSetsBoxRef.current],
-                    toggleActions: "restart none restart none",
+                    toggleActions: "restart none none reset",
+                    start: "center bottom"
                 },
-                x: -200,
+                y: -50,
                 opacity: 0,
-                duration: 2
+                duration: 0.5,
+                delay: 0.5
             })
     })
 

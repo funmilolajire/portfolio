@@ -16,7 +16,8 @@ export const GetInTouch = () => {
             gsap.from([gitTextRef.current], {
                 scrollTrigger: {
                     trigger: [gitBoxRef.current],
-                    toggleActions: "restart none restart none",
+                    toggleActions: "restart none none reset",
+                    start: "center bottom"
                 },
                 opacity: 0,
                 x: '100vw',
@@ -29,7 +30,8 @@ export const GetInTouch = () => {
             gsap.from([gitHeadingRef.current], {
                 scrollTrigger: {
                     trigger: [gitBoxRef.current],
-                    toggleActions: "restart none restart none",
+                    toggleActions: "restart none none reset",
+                    start: "center bottom"
                 },
                 opacity: 0,
                 x: '-100vw',

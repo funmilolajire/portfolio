@@ -21,20 +21,22 @@ export const ContactForm = () => {
             gsap.from([formInputsRef.current], {
                 scrollTrigger: {
                     trigger: [formBoxRef.current],
-                    toggleActions: "restart none restart none",
+                    toggleActions: "restart none none reset",
+                    start: "center bottom"
                 },
                 opacity: 0,
                 x: '100vw',
                 duration: 1,
             })
-    }, [])
+    }, [location.pathname])
     useLayoutEffect(() => {
         if (location.pathname === '/contact-me')
 
             gsap.from([formHeadingRef.current], {
                 scrollTrigger: {
                     trigger: [formBoxRef.current],
-                    toggleActions: "restart none restart none",
+                    toggleActions: "restart none none reset",
+                    start: "center bottom"
                 },
                 opacity: 0,
                 x: '-100vw',
@@ -43,7 +45,8 @@ export const ContactForm = () => {
         gsap.from(".field", {
             scrollTrigger: {
                 trigger: [formBoxRef.current],
-                toggleActions: "restart none restart none",
+                toggleActions: "restart none none reset",
+                start: "center bottom"
             },
             opacity: 0,
             scale: 1.2,
@@ -53,7 +56,7 @@ export const ContactForm = () => {
                 amount: 2
             }
         })
-    }, [])
+    }, [location.pathname])
 
     const [isSubmit, setSubmit] = useState(null)
     const [loading, setLoading] = useState(false)

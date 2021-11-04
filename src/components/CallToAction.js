@@ -16,7 +16,8 @@ export const CTA = () => {
             gsap.from([headingRef.current], {
                 scrollTrigger: {
                     trigger: [ctaBoxRef.current],
-                    toggleActions: "restart none restart none",
+                    toggleActions: "restart none none reset",
+                    start: "center bottom"
                 },
                 opacity: 0,
                 x: -200,
@@ -29,7 +30,8 @@ export const CTA = () => {
             gsap.from([dividerRef.current], {
                 scrollTrigger: {
                     trigger: [ctaBoxRef.current],
-                    toggleActions: "restart none restart none",
+                    toggleActions: "restart none none reset",
+                    start: "center bottom"
                 },
                 opacity: 0,
                 scale: 0,
@@ -42,7 +44,8 @@ export const CTA = () => {
             gsap.from([buttonRef.current], {
                 scrollTrigger: {
                     trigger: [ctaBoxRef.current],
-                    toggleActions: "restart none restart none",
+                    toggleActions: "restart none none reset",
+                    start: "center bottom"
                 },
                 opacity: 0,
                 x: 200,

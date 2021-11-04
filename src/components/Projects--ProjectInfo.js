@@ -22,7 +22,7 @@ export const ProjectInfo = ({ projectName, resetModal, showModal, modalRef, clos
 
     return ReactDOM.createPortal(
         <div ref={modalRef} onClick={closeModal} className="ProjectInfo">
-            <div className="w-9/12 h-5/6 Modal">
+            <div className="h-5/6 Modal w-9/12">
                 <div style={{ backgroundColor: project.backgroundColor }} className="Image">
                     <figure>
                         <img src={project.image} loading="lazy" alt={project.name} />
@@ -39,8 +39,8 @@ export const ProjectInfo = ({ projectName, resetModal, showModal, modalRef, clos
                         </div>
                     </div>
                     <div className="buttons">
-                        {project.moreInformation && <a href={project.moreInformation.githubLink}><button>Github Link</button></a>}
-                        {project.moreInformation && <a href={project.moreInformation.websiteLink}><button>Visit Website</button></a>}
+                        {project.moreInformation && project.moreInformation.githubLink && <a href={project.moreInformation.githubLink}><button>Github Link</button></a>}
+                        {project.moreInformation && project.moreInformation.websiteLink && <a href={project.moreInformation.websiteLink}><button>Visit Website</button></a>}
                     </div>
                     <span onClick={handleClick} aria-label="Close Modal" className="CloseModal">
                         <MdClose />

@@ -15,7 +15,8 @@ export const Hero = () => {
             gsap.from([heroImageRef.current], {
                 scrollTrigger: {
                     trigger: [heroBoxRef.current],
-                    toggleActions: "restart none restart none",
+                    toggleActions: "restart none none reset",
+                    start: "center bottom",
                     // end: () => "+=" + document.querySelector('.Home--Hero').offsetWidth
                 },
                 opacity: 0,
@@ -30,7 +31,8 @@ export const Hero = () => {
             gsap.from([heroTextRef.current], {
                 scrollTrigger: {
                     trigger: [heroBoxRef.current],
-                    toggleActions: "restart none restart none",
+                    toggleActions: "restart none none reset",
+                    start: "center bottom",
                     // end: () => "+=" + document.querySelector('.Home--Hero').offsetWidth
                 },
                 opacity: 0,

@@ -16,7 +16,8 @@
             @apply py-12 pr-5 text-5xl font-bold;
 
             span {
-                @apply text-transparent bg-gradient-to-r bg-clip-text from-name1 to-name2;
+                @apply bg-clip-text text-transparent bg-gradient-to-r from-name1 to-name2;
+                -webkit-background-clip: text;
             }
         }
 

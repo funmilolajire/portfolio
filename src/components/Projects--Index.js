@@ -18,16 +18,17 @@ export const ProjectsMainIndex = () => {
         gsap.from(".ProjectTemplate", {
             scrollTrigger: {
                 trigger: [projectsBoxRef.current],
-                // toggleActions: "restart none none none",
+                toggleActions: "restart none none reset",
+                start: "center bottom"
             },
             opacity: 0,
             scale: 1.1,
             duration: 1,
             stagger: {
-                amount: 2
+                amount: 1.5
             }
         })
-    })
+    }, [])
 
     const getProjects = async () => {
 

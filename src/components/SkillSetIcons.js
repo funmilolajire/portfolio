@@ -1,4 +1,4 @@
-import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiBootstrap, SiTailwindcss, SiReact, SiGit, SiNodeDotJs, SiJest } from 'react-icons/si'
+import { SiHtml5, SiCss3, SiJavascript, SiTypescript, SiBootstrap, SiTailwindcss, SiReact, SiGit, SiNodedotjs, SiJest, SiNextdotjs, SiNestjs, SiExpress, SiMongodb, SiMysql, SiPostgresql, SiAntdesign } from 'react-icons/si'
 import { DiSass } from 'react-icons/di'
 import { useLayoutEffect, useRef } from "react";
 import gsap from 'gsap';
@@ -15,14 +15,16 @@ export const SkillSetIcons = () => {
         gsap.from(".icon", {
             scrollTrigger: {
                 trigger: [iconsBoxRef.current],
-                toggleActions: "restart none restart none",
+                toggleActions: "restart none none reset",
+                start: "center bottom"
             },
             opacity: 0,
             y: '-50',
             scale: 1.2,
             duration: 1,
+            delay: 1,
             stagger: {
-                amount: 1
+                amount: 1.5
             }
         })
         gsap.from(".label", {
@@ -32,6 +34,7 @@ export const SkillSetIcons = () => {
             },
             opacity: 0,
             scale: 1.2,
+            delay: 1,
             duration: 1,
             stagger: {
                 amount: 1
@@ -59,6 +62,10 @@ export const SkillSetIcons = () => {
                 <span ref={iconLabelRef} className="label">Typescript</span>
             </div>
             <div>
+                <span ref={iconRef} className="icon"><SiAntdesign title="Antd" /></span>
+                <span ref={iconLabelRef} className="label">AntD</span>
+            </div>
+            <div>
                 <span ref={iconRef} className="icon"><SiBootstrap title="Bootstrap" /></span>
                 <span ref={iconLabelRef} className="label">Bootstrap</span>
             </div>
@@ -79,8 +86,32 @@ export const SkillSetIcons = () => {
                 <span ref={iconLabelRef} className="label">React</span>
             </div>
             <div>
-                <span ref={iconRef} className="icon"><SiNodeDotJs title="NodeJs" /></span>
+                <span ref={iconRef} className="icon"><SiNextdotjs title="NextJs" /></span>
+                <span ref={iconLabelRef} className="label">NextJs</span>
+            </div>
+            <div>
+                <span ref={iconRef} className="icon"><SiNodedotjs title="NodeJs" /></span>
                 <span ref={iconLabelRef} className="label">NodeJS</span>
+            </div>
+            <div>
+                <span ref={iconRef} className="icon"><SiExpress title="expressJs" /></span>
+                <span ref={iconLabelRef} className="label">ExpressJS</span>
+            </div>
+            <div>
+                <span ref={iconRef} className="icon"><SiNestjs title="NestJs" /></span>
+                <span ref={iconLabelRef} className="label">NestJS</span>
+            </div>
+            <div>
+                <span ref={iconRef} className="icon"><SiMongodb title="MongoDB" /></span>
+                <span ref={iconLabelRef} className="label">MongoDB</span>
+            </div>
+            <div>
+                <span ref={iconRef} className="icon"><SiMysql title="MySQL" /></span>
+                <span ref={iconLabelRef} className="label">MySQL</span>
+            </div>
+            <div>
+                <span ref={iconRef} className="icon"><SiPostgresql title="PostgreSQL" /></span>
+                <span ref={iconLabelRef} className="label">PostgreSQL</span>
             </div>
             <div>
                 <span ref={iconRef} className="icon"><SiJest title="Jest" /></span>

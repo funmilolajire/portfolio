@@ -1,11 +1,93 @@
 {
     "projects": [{
             "id": 1,
+            "name": "Access Granted Africa",
+            "image": "/images/projectimages/accessgrantedafrica.jpg",
+            "backgroundColor": "#65007A",
+            "thumbnailContent": {
+                "description": "A music distribution and talent management company's website.",
+                "projectLink": "/projects/accessgrantedafrica",
+                "toolsUsed": ["REACT", "TYPESCRIPT", "CONTEXT API", "SCSS-MODULES", "EXPRESSJS", "NODEMAILER", "HANDLEBARS", "MYSQL", "MAILCHIMP API", "FORMIK"]
+            },
+            "moreInformation": {
+                "websiteLink": "https://accessgrantedafrica.com/"
+            }
+        }, {
+            "id": 2,
+            "name": "FlowZone Express",
+            "image": "/images/projectimages/flowzonexpress.png",
+            "backgroundColor": "#F26C4F",
+            "thumbnailContent": {
+                "description": "A package delivery company's website, including admin dashboard.",
+                "projectLink": "/projects/flowzonexpress",
+                "toolsUsed": ["REACT", "TYPESCRIPT", "CONTEXT API", "SCSS-MODULES", "EXPRESSJS", "NODEMAILER", "HANDLEBARS", "MYSQL", "MAILCHIMP API", "GSAP", "PASSPORTJS", "FORMIK"]
+            },
+            "moreInformation": {
+                "websiteLink": "https://flowzonexpress.com/"
+            }
+        }, {
+            "id": 3,
+            "name": "Invoice App",
+            "image": "/images/projectimages/invoiceapp.png",
+            "backgroundColor": "#9277FF",
+            "thumbnailContent": {
+                "description": "An invoicing app built with nextjs and nestjs.",
+                "projectLink": "/projects/invoiceapp",
+                "toolsUsed": ["NEXTJS", "TYPESCRIPT", "NESTJS", "CSS MODULES", "FORMIK", "MONGODB", "MONGOOSE", "HOOKSTATE"]
+            },
+            "moreInformation": {
+                "websiteLink": "https://invoice-app-nu.vercel.app/",
+                "githubLink": "https://github.com/funmilolajire/invoice-app"
+            }
+        }, {
+            "id": 4,
+            "name": "Audiophile",
+            "image": "/images/projectimages/audiophile.png",
+            "backgroundColor": "#D87D4A",
+            "thumbnailContent": {
+                "description": "A website for audio lovers to purchase audio equipment.",
+                "projectLink": "/projects/audiophile",
+                "toolsUsed": ["NEXTJS", "TYPESCRIPT", "SCSS", "NESTJS", "FORMIK", "POSTGRESQL", "TYPEORM"]
+            },
+            "moreInformation": {
+                "websiteLink": "https://audiophile-beta.vercel.app/",
+                "githubLink": "https://github.com/funmilolajire/audiophile"
+            }
+        }, {
+            "id": 5,
+            "name": "Space Tourism",
+            "image": "/images/projectimages/spacetourism.png",
+            "backgroundColor": "#0B0D19",
+            "thumbnailContent": {
+                "description": "a multi-page space tourism website",
+                "projectLink": "/projects/spacetourism",
+                "toolsUsed": ["NEXTJS", "TYPESCRIPT", "CONTEXT API", "SCSS MODULES"]
+            },
+            "moreInformation": {
+                "websiteLink": "https://space-tourism-xi.vercel.app/",
+                "githubLink": "https://github.com/funmilolajire/space-tourism"
+            }
+        }, {
+            "id": 6,
+            "name": "Planets Facts",
+            "image": "/images/projectimages/planetsfacts.png",
+            "backgroundColor": "#070724",
+            "thumbnailContent": {
+                "description": "An 8-page planets site that displays facts about each planet.",
+                "projectLink": "/projects/planetsfacts",
+                "toolsUsed": ["NEXTJS", "TYPESCRIPT", "CONTEXT API", "SCSS MODULES", "GSAP"]
+            },
+            "moreInformation": {
+                "websiteLink": "https://planets-facts.vercel.app/",
+                "githubLink": "https://github.com/funmilolajire/planets-facts"
+            }
+        }, {
+            "id": 7,
             "name": "Reddit Client",
             "image": "/images/projectimages/redditclient.png",
             "backgroundColor": "#F80",
             "thumbnailContent": {
-                "description": "This is a web application that retrieves data from reddit using it's api and allows users to view and search posts and comments provided by the api.",
+                "description": "This is a web application that retrieves data from reddit using its API and allows users to view and search posts and comments provided by the API.",
                 "projectLink": "/projects/redditclient",
                 "toolsUsed": ["REDDIT API", "REACT", "TYPESCRIPT", "REDUX", "TAILWIND CSS", "SASS", "GSAP", "JEST", "ENZYME"]
             },
@@ -15,7 +97,7 @@
             }
         },
         {
-            "id": 2,
+            "id": 8,
             "name": "Jammming",
             "image": "/images/projectimages/jammming.png",
             "backgroundColor": "#5132BD",
@@ -30,7 +112,7 @@
             }
         },
         {
-            "id": 3,
+            "id": 9,
             "name": "WITW",
             "image": "/images/projectimages/witw.png",
             "backgroundColor": "#F3603C",
@@ -44,14 +126,14 @@
                 "githubLink": "https://github.com/funmilolajire/whereintheworldv2"
             }
         }, {
-            "id": 4,
+            "id": 10,
             "name": "Portfolio",
             "image": "/images/projectimages/portfolio.png",
             "backgroundColor": "#33323D",
             "thumbnailContent": {
                 "description": "My personal portfolio project.",
                 "projectLink": "/projects/portfolio",
-                "toolsUsed": ["REACT", "SASS", "TAILWIND CSS", "FIREBASE", "GSAP"]
+                "toolsUsed": ["REACT", "SCSS", "TAILWIND CSS", "FIREBASE", "GSAP"]
             },
             "moreInformation": {
                 "websiteLink": "https://funmilolajire.netlify.app/",
