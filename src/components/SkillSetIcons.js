@@ -16,7 +16,7 @@ export const SkillSetIcons = () => {
             scrollTrigger: {
                 trigger: [iconsBoxRef.current],
                 toggleActions: "restart none none reset",
-                start: "center bottom"
+                // start: "center bottom"
             },
             opacity: 0,
             y: '-50',
@@ -30,7 +30,7 @@ export const SkillSetIcons = () => {
         gsap.from(".label", {
             scrollTrigger: {
                 trigger: [iconsBoxRef.current],
-                toggleActions: "restart none restart none",
+                toggleActions: "restart none none reset",
             },
             opacity: 0,
             scale: 1.2,

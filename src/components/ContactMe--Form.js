@@ -22,7 +22,7 @@ export const ContactForm = () => {
                 scrollTrigger: {
                     trigger: [formBoxRef.current],
                     toggleActions: "restart none none reset",
-                    start: "center bottom"
+                    // start: "center top"
                 },
                 opacity: 0,
                 x: '100vw',
@@ -36,7 +36,7 @@ export const ContactForm = () => {
                 scrollTrigger: {
                     trigger: [formBoxRef.current],
                     toggleActions: "restart none none reset",
-                    start: "center bottom"
+                    // start: "center bottom"
                 },
                 opacity: 0,
                 x: '-100vw',
@@ -46,7 +46,7 @@ export const ContactForm = () => {
             scrollTrigger: {
                 trigger: [formBoxRef.current],
                 toggleActions: "restart none none reset",
-                start: "center bottom"
+                // start: "center bottom"
             },
             opacity: 0,
             scale: 1.2,

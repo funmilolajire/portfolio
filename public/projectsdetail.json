@@ -1,6 +1,19 @@
 {
     "projects": [{
             "id": 1,
+            "name": "Agroverified Nigeria",
+            "image": "/images/projectimages/agroverified.png",
+            "backgroundColor": "#087830",
+            "thumbnailContent": {
+                "description": "Frontend Development of the agroverified website, a platform for ensuring agricultural excellence in Nigeria",
+                "projectLink": "/projects/agroverified",
+                "toolsUsed": ["FRONTEND", "REACT", "REDUX TOOLKIT", "SCSS-MODULES", "ANTD", "FORMIK", "GSAP"]
+            },
+            "moreInformation": {
+                "websiteLink": "https://agroverified.com/"
+            }
+        }, {
+            "id": 2,
             "name": "Access Granted Africa",
             "image": "/images/projectimages/accessgrantedafrica.jpg",
             "backgroundColor": "#65007A",
@@ -13,7 +26,7 @@
                 "websiteLink": "https://accessgrantedafrica.com/"
             }
         }, {
-            "id": 2,
+            "id": 3,
             "name": "FlowZone Express",
             "image": "/images/projectimages/flowzonexpress.png",
             "backgroundColor": "#F26C4F",
@@ -26,7 +39,7 @@
                 "websiteLink": "https://flowzonexpress.com/"
             }
         }, {
-            "id": 3,
+            "id": 4,
             "name": "Invoice App",
             "image": "/images/projectimages/invoiceapp.png",
             "backgroundColor": "#9277FF",
@@ -40,7 +53,7 @@
                 "githubLink": "https://github.com/funmilolajire/invoice-app"
             }
         }, {
-            "id": 4,
+            "id": 5,
             "name": "Audiophile",
             "image": "/images/projectimages/audiophile.png",
             "backgroundColor": "#D87D4A",
@@ -54,7 +67,7 @@
                 "githubLink": "https://github.com/funmilolajire/audiophile"
             }
         }, {
-            "id": 5,
+            "id": 6,
             "name": "Space Tourism",
             "image": "/images/projectimages/spacetourism.png",
             "backgroundColor": "#0B0D19",
@@ -68,7 +81,7 @@
                 "githubLink": "https://github.com/funmilolajire/space-tourism"
             }
         }, {
-            "id": 6,
+            "id": 7,
             "name": "Planets Facts",
             "image": "/images/projectimages/planetsfacts.png",
             "backgroundColor": "#070724",
@@ -82,7 +95,7 @@
                 "githubLink": "https://github.com/funmilolajire/planets-facts"
             }
         }, {
-            "id": 7,
+            "id": 8,
             "name": "Reddit Client",
             "image": "/images/projectimages/redditclient.png",
             "backgroundColor": "#F80",
@@ -97,7 +110,7 @@
             }
         },
         {
-            "id": 8,
+            "id": 9,
             "name": "Jammming",
             "image": "/images/projectimages/jammming.png",
             "backgroundColor": "#5132BD",
@@ -112,7 +125,7 @@
             }
         },
         {
-            "id": 9,
+            "id": 10,
             "name": "WITW",
             "image": "/images/projectimages/witw.png",
             "backgroundColor": "#F3603C",
@@ -124,20 +137,6 @@
             "moreInformation": {
                 "websiteLink": "https://whereindeworld.netlify.app/",
                 "githubLink": "https://github.com/funmilolajire/whereintheworldv2"
-            }
-        }, {
-            "id": 10,
-            "name": "Portfolio",
-            "image": "/images/projectimages/portfolio.png",
-            "backgroundColor": "#33323D",
-            "thumbnailContent": {
-                "description": "My personal portfolio project.",
-                "projectLink": "/projects/portfolio",
-                "toolsUsed": ["REACT", "SCSS", "TAILWIND CSS", "FIREBASE", "GSAP"]
-            },
-            "moreInformation": {
-                "websiteLink": "https://funmilolajire.netlify.app/",
-                "githubLink": "https://github.com/funmilolajire/portfolio"
             }
         }
     ]

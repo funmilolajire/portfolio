@@ -17,7 +17,7 @@ export const SkillSet = () => {
                 scrollTrigger: {
                     trigger: [skillSetsBoxRef.current],
                     toggleActions: "restart none none reset",
-                    start: "center bottom"
+                    // start: "center bottom"
                 },
                 y: -50,
                 opacity: 0,
@@ -31,7 +31,7 @@ export const SkillSet = () => {
                 scrollTrigger: {
                     trigger: [skillSetsBoxRef.current],
                     toggleActions: "restart none none reset",
-                    start: "center bottom"
+                    // start: "center bottom"
                 },
                 y: -50,
                 opacity: 0,
