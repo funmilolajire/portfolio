@@ -74,7 +74,7 @@ export const About = () => {
         </picture> */}
             <article>
                 <h2 ref={aboutHeaderRef}>About Me</h2>
-                <p ref={aboutTextRef}>I’m a junior front-end developer looking for freelance opportunities or a new role in an exciting company. I focus on writing accessible HTML, using modern CSS practices/frameworks and writing clean JavaScript/TypeScript. When writing JavaScript code, I mostly use React and NextJs, but I can adapt to whatever tools are required. I have experience building small and medium websites, web apps, using animation libraries such as gsap and framer motion. I also have full-stack developer experience working with NodeJs, ExpressJs, NestJs, MySql, MongoDB, PostgreSql{/* , firebase*/} and some other tools and frameworks. I’m based in Klaipeda, Lithuania, but I’m happy working remotely. I’d love you to check out my work.</p>
+                <p ref={aboutTextRef}>I’m a front-end developer looking for freelance opportunities or a new role in an exciting company. I focus on writing accessible HTML, using modern CSS practices/frameworks and writing clean JavaScript/TypeScript. When writing JavaScript code, I mostly use React and NextJs, but I can adapt to whatever tools are required. I have experience building small and medium websites, web apps, using animation libraries such as gsap and framer motion. I also have full-stack developer experience working with NodeJs, ExpressJs, NestJs, MySql, MongoDB, PostgreSql{/* , firebase*/} and some other tools and frameworks. I’m based in Klaipeda, Lithuania, but I’m happy working remotely. I’d love you to check out my work.</p>
                 <Link ref={aboutButtonRef} to="/projects">
                     <button>
                         Go To Portfolio
